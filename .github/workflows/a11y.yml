@@ -21,15 +21,22 @@ jobs:
       # signal. Flip to 'true' — here or via workflow_dispatch — once remediated
       # snapshots exist and the gate should hold the line against regressions.
       A11Y_STRICT: ${{ inputs.strict && 'true' || 'false' }}
+      # Run JS-based actions on Node 24 (silences the Node 20 deprecation notice).
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
     steps:
       - uses: actions/checkout@v4
 
+      # Pin pnpm to 9: pnpm-lock.yaml is lockfileVersion 9.0, and an unpinned
+      # action-setup resolves to the latest major, which can reject the lockfile
+      # under --frozen-lockfile. Matches the presto-2026 workflows.
       - uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
 
       - name: Install dependencies
