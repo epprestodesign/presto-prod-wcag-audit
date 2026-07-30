@@ -48,28 +48,28 @@ A missing alt attribute is not the same as alt="". With no attribute at all, scr
 <summary>Affected elements (5)</summary>
 
 ```html
-<!-- div:nth-of-type(2) &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(1) &gt; img -->
-&lt;img src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn"&gt;
+<!-- div:nth-of-type(2) > div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(1) > img -->
+<img src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn">
 ```
 
 ```html
-<!-- div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; img -->
-&lt;img src="https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.pn"&gt;
+<!-- div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img -->
+<img src="https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.pn">
 ```
 
 ```html
-<!-- div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; img -->
-&lt;img src="https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.pn"&gt;
+<!-- div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > img -->
+<img src="https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.pn">
 ```
 
 ```html
-<!-- div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; img -->
-&lt;img src="https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.pn"&gt;
+<!-- div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > img -->
+<img src="https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.pn">
 ```
 
 ```html
-<!-- div &gt; div &gt; div &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(4) &gt; img -->
-&lt;img src="https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.pn"&gt;
+<!-- div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(4) > img -->
+<img src="https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.pn">
 ```
 
 </details>
@@ -119,27 +119,27 @@ Same defect as image-alt, reported from the DOM inventory: the attribute is abse
 
 ```html
 <!-- div[data-snapshot="1"],.big-image -->
-&lt;img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png" class="big-image"&gt;
+<img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png" class="big-image">
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(1) &gt; .image-hover -->
-&lt;img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png" class="image-hover"&gt;
+<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(1) > .image-hover -->
+<img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png" class="image-hover">
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(2) &gt; .image-hover -->
-&lt;img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png" class="image-hover"&gt;
+<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(2) > .image-hover -->
+<img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png" class="image-hover">
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(3) &gt; .image-hover -->
-&lt;img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png" class="image-hover"&gt;
+<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(3) > .image-hover -->
+<img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png" class="image-hover">
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(4) &gt; .image-hover -->
-&lt;img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.png" class="image-hover"&gt;
+<!-- div[data-snapshot="1"],.grid-item[data-v-ddcd707f=""]:nth-child(4) > .image-hover -->
+<img data-v-ddcd707f="" src="https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.png" class="image-hover">
 ```
 
 </details>
@@ -195,20 +195,20 @@ These controls rely on placeholder text or adjacent visual text. A placeholder i
 
 **Evidence**
 
-- `&lt;textarea&gt; placeholder="Write your message here"`
-- `&lt;input type="file"&gt; placeholder=""`
+- `<textarea> placeholder="Write your message here"`
+- `<input type="file"> placeholder=""`
 
 <details>
 <summary>Affected elements (2)</summary>
 
 ```html
-<!-- div:nth-of-type(4) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; div &gt; textarea -->
-&lt;textarea name="" placeholder="Write your message here"&gt;
+<!-- div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea -->
+<textarea name="" placeholder="Write your message here">
 ```
 
 ```html
-<!-- div:nth-of-type(4) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; span:nth-of-type(1) &gt; input -->
-&lt;input name="file" placeholder=""&gt;
+<!-- div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input -->
+<input name="file" placeholder="">
 ```
 
 </details>
@@ -287,7 +287,7 @@ These controls are identified only by placeholder text or by nearby visual text.
 
 ```html
 <!-- div[data-snapshot="1"],.q-btn--round -->
-&lt;button data-v-ddcd707f="" class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase arrow-button" tabindex="0" type="button"&gt;
+<button data-v-ddcd707f="" class="q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase arrow-button" tabindex="0" type="button">
 ```
 
 </details>
@@ -357,43 +357,43 @@ These buttons contain only an icon glyph, so their accessible name resolves to t
 <summary>Affected elements (8)</summary>
 
 ```html
-<!-- div[data-snapshot="1"],.bg-green &gt; .q-chip__content.q-anchor--skip.no-wrap -->
-&lt;div class="q-chip__content col row no-wrap items-center q-anchor--skip"&gt;Preferred Hotel&lt;/div&gt;
+<!-- div[data-snapshot="1"],.bg-green > .q-chip__content.q-anchor--skip.no-wrap -->
+<div class="q-chip__content col row no-wrap items-center q-anchor--skip">Preferred Hotel</div>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.low-rate &gt; .q-chip__content.q-anchor--skip.no-wrap -->
-&lt;div class="q-chip__content col row no-wrap items-center q-anchor--skip"&gt;Low Rate Guarantee&lt;/div&gt;
+<!-- div[data-snapshot="1"],.low-rate > .q-chip__content.q-anchor--skip.no-wrap -->
+<div class="q-chip__content col row no-wrap items-center q-anchor--skip">Low Rate Guarantee</div>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.q-py-xs:nth-child(1) &gt; .text-green -->
-&lt;div class="text-green"&gt;24 rooms left&lt;/div&gt;
+<!-- div[data-snapshot="1"],.q-py-xs:nth-child(1) > .text-green -->
+<div class="text-green">24 rooms left</div>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.q-py-xs:nth-child(2) &gt; .text-green -->
-&lt;div class="text-green"&gt;22 rooms left&lt;/div&gt;
+<!-- div[data-snapshot="1"],.q-py-xs:nth-child(2) > .text-green -->
+<div class="text-green">22 rooms left</div>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.q-py-xs:nth-child(3) &gt; .text-green -->
-&lt;div class="text-green"&gt;6 rooms left&lt;/div&gt;
+<!-- div[data-snapshot="1"],.q-py-xs:nth-child(3) > .text-green -->
+<div class="text-green">6 rooms left</div>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.q-py-xs:nth-child(4) &gt; .text-green -->
-&lt;div class="text-green"&gt;23 rooms left&lt;/div&gt;
+<!-- div[data-snapshot="1"],.q-py-xs:nth-child(4) > .text-green -->
+<div class="text-green">23 rooms left</div>
 ```
 
 ```html
 <!-- div[data-snapshot="1"],.text-caption -->
-&lt;div class="text-caption text-grey"&gt;Total includes taxes &amp; fees&lt;/div&gt;
+<div class="text-caption text-grey">Total includes taxes &amp; fees</div>
 ```
 
 ```html
 <!-- div[data-snapshot="1"],.footer-link -->
-&lt;a data-v-fd02e343="" href="https://eventpipe.com/legal/privacy" target="_blank" class="footer-link"&gt;Privacy Policy&lt;/a&gt;
+<a data-v-fd02e343="" href="https://eventpipe.com/legal/privacy" target="_blank" class="footer-link">Privacy Policy</a>
 ```
 
 </details>
@@ -449,26 +449,26 @@ Measured by tabbing to each element and diffing the rendered pixels against the 
 
 **Evidence**
 
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
 
 <details>
 <summary>Affected elements (3)</summary>
 
 ```html
-<!-- div:nth-of-type(4)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 ```html
-<!-- div:nth-of-type(4)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 ```html
-<!-- div:nth-of-type(4)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 </details>
@@ -529,18 +529,18 @@ WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apa
 <summary>Affected elements (3)</summary>
 
 ```html
-<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(1) &gt; label &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
-&lt;input&gt; Sunday: 2028
+<!-- div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input -->
+<input> Sunday: 2028
 ```
 
 ```html
-<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; footer &gt; div &gt; div &gt; a -->
-&lt;a&gt; Privacy Policy
+<!-- div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > footer > div > div > a -->
+<a> Privacy Policy
 ```
 
 ```html
-<!-- div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 </details>
@@ -723,7 +723,7 @@ A keyboard user must tab through 20 stops in source order to reach anything late
 **Evidence**
 
 - `20 tab stops before any bypass is offered`
-- `First stops: Contact us -&gt; Manage Booking -&gt; Manage Booking`
+- `First stops: Contact us -> Manage Booking -> Manage Booking`
 
 
 #### Fix — Add a skip link

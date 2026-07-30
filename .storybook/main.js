@@ -1,7 +1,23 @@
+import remarkGfm from 'remark-gfm'
+
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.js'],
-  addons: ['@storybook/addon-docs', '@storybook/addon-a11y'],
+  addons: [
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        // The findings pages are almost entirely tables — evidence rows,
+        // severity counts, WCAG criteria. MDX does not parse GitHub-flavoured
+        // tables without this, and silently renders them as literal pipe text
+        // collapsed into one paragraph.
+        mdxPluginOptions: {
+          mdxCompileOptions: { remarkPlugins: [remarkGfm] },
+        },
+      },
+    },
+    '@storybook/addon-a11y',
+  ],
   framework: { name: '@storybook/html-vite', options: {} },
   docs: {},
   // Served under /snapshots, never at the root: the capture pipeline writes its

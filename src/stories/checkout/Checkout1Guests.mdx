@@ -38,62 +38,62 @@ These controls rely on placeholder text or adjacent visual text. A placeholder i
 
 **Evidence**
 
-- `&lt;input type="text"&gt; placeholder="First Name"`
-- `&lt;input type="text"&gt; placeholder="Last Name"`
-- `&lt;input type="text"&gt; placeholder="(000) 000-0000"`
-- `&lt;select&gt; placeholder=""`
-- `&lt;input type="text"&gt; placeholder="Group, club, team, gym name (or N/A if not applicable)"`
-- `&lt;input type="text"&gt; placeholder="i.e. All-Stars 12U Team"`
-- `&lt;input type="text"&gt; placeholder="Earn points - enter your hotel brand rewards account number (if applicable)"`
-- `&lt;textarea&gt; placeholder="Write your message here"`
-- `&lt;input type="file"&gt; placeholder=""`
+- `<input type="text"> placeholder="First Name"`
+- `<input type="text"> placeholder="Last Name"`
+- `<input type="text"> placeholder="(000) 000-0000"`
+- `<select> placeholder=""`
+- `<input type="text"> placeholder="Group, club, team, gym name (or N/A if not applicable)"`
+- `<input type="text"> placeholder="i.e. All-Stars 12U Team"`
+- `<input type="text"> placeholder="Earn points - enter your hotel brand rewards account number (if applicable)"`
+- `<textarea> placeholder="Write your message here"`
+- `<input type="file"> placeholder=""`
 
 <details>
 <summary>Affected elements (9)</summary>
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].FirstName" placeholder="First Name"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input -->
+<input name="Rooms[0].Guests[0].FirstName" placeholder="First Name">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].LastName" placeholder="Last Name"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input -->
+<input name="Rooms[0].Guests[0].LastName" placeholder="Last Name">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].PhoneNumber" placeholder="(000) 000-0000"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input -->
+<input name="Rooms[0].Guests[0].PhoneNumber" placeholder="(000) 000-0000">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(4) &gt; select -->
-&lt;select name="Rooms[0].Guests[0].GuestType" placeholder=""&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > select -->
+<select name="Rooms[0].Guests[0].GuestType" placeholder="">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(4) &gt; div:nth-of-type(1) &gt; div &gt; input -->
-&lt;input name="Rooms[0].OrganizationName" placeholder="Group, club, team, gym name (or N/A if not applicable)"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(1) > div > input -->
+<input name="Rooms[0].OrganizationName" placeholder="Group, club, team, gym name (or N/A if not applicable)">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; input -->
-&lt;input name="Rooms[0].TeamName" placeholder="i.e. All-Stars 12U Team"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > input -->
+<input name="Rooms[0].TeamName" placeholder="i.e. All-Stars 12U Team">
 ```
 
 ```html
-<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(6) &gt; div &gt; input -->
-&lt;input name="Rooms[0].HotelRewardsNumber" placeholder="Earn points - enter your hotel brand rewards account number (if applicable)"&gt;
+<!-- div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input -->
+<input name="Rooms[0].HotelRewardsNumber" placeholder="Earn points - enter your hotel brand rewards account number (if applicable)">
 ```
 
 ```html
-<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; div &gt; textarea -->
-&lt;textarea name="" placeholder="Write your message here"&gt;
+<!-- div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea -->
+<textarea name="" placeholder="Write your message here">
 ```
 
 ```html
-<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; span:nth-of-type(1) &gt; input -->
-&lt;input name="file" placeholder=""&gt;
+<!-- div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input -->
+<input name="file" placeholder="">
 ```
 
 </details>
@@ -249,7 +249,7 @@ A time limit is only permitted under WCAG 2.2.1 if the user can turn it off, adj
 
 ```html
 <!-- div[data-snapshot="1"],#Rooms\[0\]\.Guests\[0\]\.GuestType -->
-&lt;select name="Rooms[0].Guests[0].GuestType" id="Rooms[0].Guests[0].GuestType" class="customized-select text-muted"&gt;
+<select name="Rooms[0].Guests[0].GuestType" id="Rooms[0].Guests[0].GuestType" class="customized-select text-muted">
 ```
 
 </details>
@@ -325,32 +325,32 @@ Measured by tabbing to each element and diffing the rendered pixels against the 
 
 **Evidence**
 
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
-- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `<div> "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
 
 <details>
 <summary>Affected elements (4)</summary>
 
 ```html
-<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 ```html
-<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 ```html
-<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 ```html
-<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 </details>
@@ -406,22 +406,22 @@ Measured by tabbing to each control and diffing rendered pixels: these produced 
 
 ```html
 <!-- div[data-snapshot="1"],.btn-outline.btn-outline-primary[target="_blank"] -->
-&lt;a class="btn btn-outline btn-outline-primary font-14" href="https://app.eventpipe.com/search/" target="_blank"&gt;Manage Booking&lt;/a&gt;
+<a class="btn btn-outline btn-outline-primary font-14" href="https://app.eventpipe.com/search/" target="_blank">Manage Booking</a>
 ```
 
 ```html
 <!-- div[data-snapshot="1"],.text-yellow -->
-&lt;p class="font-14 text-yellow"&gt;&lt;i class="fa fa-star"&gt;&lt;/i&gt; 3.5 Stars&lt;/p&gt;
+<p class="font-14 text-yellow"><i class="fa fa-star"></i> 3.5 Stars</p>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.mb-md-0.col-md-6.col-12 &gt; .btn-outline-secondary.btn.w-100 -->
-&lt;a href="https://app.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/order/6db10b9f-5135-492e-908d-002e4766abf7/restart/" class="btn btn-outline-secondary w-100"&gt;Start Over&lt;/a&gt;
+<!-- div[data-snapshot="1"],.mb-md-0.col-md-6.col-12 > .btn-outline-secondary.btn.w-100 -->
+<a href="https://app.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/order/REDACTED-ORDER-ID/restart/" class="btn btn-outline-secondary w-100">Start Over</a>
 ```
 
 ```html
-<!-- div[data-snapshot="1"],.col-md-6.col-12:nth-child(2) &gt; .btn-outline-secondary.btn.w-100 -->
-&lt;a href="https://app.eventpip..." class="btn btn-outline-seco..."&gt;
+<!-- div[data-snapshot="1"],.col-md-6.col-12:nth-child(2) > .btn-outline-secondary.btn.w-100 -->
+<a href="https://app.eventpip..." class="btn btn-outline-seco...">
 ```
 
 </details>
@@ -485,18 +485,18 @@ WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apa
 <summary>Affected elements (3)</summary>
 
 ```html
-<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(7) &gt; span &gt; a -->
-&lt;a&gt; Team Travel Source (TTS) Privacy Policy
+<!-- div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(7) > span > a -->
+<a> Team Travel Source (TTS) Privacy Policy
 ```
 
 ```html
-<!-- div:nth-of-type(2) &gt; div &gt; div &gt; a -->
-&lt;a&gt; Privacy Policy
+<!-- div:nth-of-type(2) > div > div > a -->
+<a> Privacy Policy
 ```
 
 ```html
-<!-- div:nth-of-type(3) &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) -->
-&lt;div&gt; Close chat
+<!-- div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3) -->
+<div> Close chat
 ```
 
 </details>
@@ -607,7 +607,7 @@ A keyboard user must tab through 18 stops in source order to reach anything late
 **Evidence**
 
 - `18 tab stops before any bypass is offered`
-- `First stops: Manage Booking -&gt; 1 -&gt; input`
+- `First stops: Manage Booking -> 1 -> input`
 
 
 #### Fix — Add a skip link
@@ -674,7 +674,7 @@ Without a language, a screen reader may announce the page using the wrong pronun
 
 **Evidence**
 
-- `&lt;html&gt; has no lang attribute`
+- `<html> has no lang attribute`
 
 
 #### Fix — Declare the document language
@@ -697,7 +697,7 @@ The checkout document has no lang attribute. Screen readers fall back to the use
 **Notes**
 
 - The Vue SPA already sets lang="en"; only the server-rendered checkout is missing it.
-- Mark any inline language change too: `&lt;span lang="fr"&gt;…&lt;/span&gt;`.
+- Mark any inline language change too: `<span lang="fr">…</span>`.
 
 **Effort:** XS &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
 
@@ -719,32 +719,32 @@ WCAG 1.3.5 requires that inputs collecting information about the user expose the
 
 **Evidence**
 
-- `Rooms[0].Guests[0].FirstName -&gt; needs autocomplete="given-name"`
-- `Rooms[0].Guests[0].LastName -&gt; needs autocomplete="family-name"`
-- `Rooms[0].Guests[0].PhoneNumber -&gt; needs autocomplete="tel"`
-- `Rooms[0].HotelRewardsNumber -&gt; needs autocomplete="tel"`
+- `Rooms[0].Guests[0].FirstName -> needs autocomplete="given-name"`
+- `Rooms[0].Guests[0].LastName -> needs autocomplete="family-name"`
+- `Rooms[0].Guests[0].PhoneNumber -> needs autocomplete="tel"`
+- `Rooms[0].HotelRewardsNumber -> needs autocomplete="tel"`
 
 <details>
 <summary>Affected elements (4)</summary>
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].FirstName"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input -->
+<input name="Rooms[0].Guests[0].FirstName">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].LastName"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input -->
+<input name="Rooms[0].Guests[0].LastName">
 ```
 
 ```html
-<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; input -->
-&lt;input name="Rooms[0].Guests[0].PhoneNumber"&gt;
+<!-- div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input -->
+<input name="Rooms[0].Guests[0].PhoneNumber">
 ```
 
 ```html
-<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(6) &gt; div &gt; input -->
-&lt;input name="Rooms[0].HotelRewardsNumber"&gt;
+<!-- div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input -->
+<input name="Rooms[0].HotelRewardsNumber">
 ```
 
 </details>
@@ -852,7 +852,7 @@ Skipped ranks imply a nesting relationship that does not exist, misrepresenting 
 
 **Evidence**
 
-- `h2 -&gt; h6 at "Two Queen Beds - Guest Room"`
+- `h2 -> h6 at "Two Queen Beds - Guest Room"`
 
 
 #### Fix — Do not skip heading ranks

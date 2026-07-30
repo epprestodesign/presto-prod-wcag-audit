@@ -39,9 +39,29 @@ const JOURNEY_TITLES = {
 
 const IMPACT_RANK = { critical: 0, serious: 1, moderate: 2, minor: 3 }
 const esc = (s = '') => String(s).replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$\{/g, '\\${')
-/** MDX renders {} as JSX expressions, so any literal brace must be escaped. */
+/**
+ * Escape prose for MDX, leaving inline code spans alone.
+ *
+ * MDX reads `<` as a JSX tag and `{` as an expression, so prose must escape
+ * both. Inside a backtick span the content is already literal, and escaping it
+ * there renders the entity itself — a note reading `<span lang="fr">` comes out
+ * as `&lt;span lang="fr"&gt;`. So split on code spans and escape only around them.
+ */
 const mdxSafe = (s = '') =>
-  String(s).replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\{/g, '&#123;').replace(/\}/g, '&#125;')
+  String(s)
+    .split(/(`[^`]*`)/g)
+    .map((part) =>
+      part.startsWith('`') && part.endsWith('`') && part.length > 1
+        ? part
+        : part.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\{/g, '&#123;').replace(/\}/g, '&#125;')
+    )
+    .join('')
+
+// Code spans and fences are already literal in MDX — running prose escaping over
+// them renders the entities themselves (`&lt;input&gt;` instead of `<input>`).
+// These only neutralise the delimiter that would break out of the code context.
+const codeInline = (s = '') => String(s).replace(/`/g, "'").replace(/\r?\n/g, ' ')
+const codeBlock = (s = '') => String(s).replace(/```/g, "'''")
 const pascal = (s) => s.replace(/(^|[-_])(\w)/g, (_, __, c) => c.toUpperCase())
 
 /** All findings for one page, axe + structural, normalised and ranked. */
@@ -148,7 +168,7 @@ ${mdxSafe(target.description || '')}
 
 ${
   target.url || target.flow?.start
-    ? `**Captured from:** \`${mdxSafe(target.url || target.flow?.start)}\``
+    ? `**Captured from:** \`${codeInline(target.url || target.flow?.start)}\``
     : `> **Not yet captured.** ${mdxSafe(target.note || 'This page is gated behind a completed booking or an authenticated session.')}
 >
 > Add its URL to \`capture/targets.json\` and run \`pnpm capture && pnpm audit && pnpm report\`.`
@@ -188,7 +208,7 @@ ${findings.length} distinct issue${findings.length === 1 ? '' : 's'} on this pag
       const evidence = f.evidence.length
         ? `**Evidence**
 
-${f.evidence.map((e) => `- \`${mdxSafe(e)}\``).join('\n')}
+${f.evidence.map((e) => `- \`${codeInline(e)}\``).join('\n')}
 `
         : ''
 
@@ -200,8 +220,8 @@ ${f.nodes
   .slice(0, 12)
   .map(
     (n) => `\`\`\`html
-<!-- ${mdxSafe((Array.isArray(n.target) ? n.target[0] : n.target) || '')} -->
-${mdxSafe((n.html || '').trim())}
+<!-- ${codeBlock((Array.isArray(n.target) ? n.target[0] : n.target) || '')} -->
+${codeBlock((n.html || '').trim())}
 \`\`\``
   )
   .join('\n\n')}
@@ -223,7 +243,7 @@ ${fix.notes?.length ? `**Notes**\n\n${fix.notes.map((n) => `- ${mdxSafe(n)}`).jo
 `
         : `#### Fix
 
-_No bespoke remediation authored for \`${mdxSafe(f.id)}\` yet._${f.helpUrl ? ` See the [axe rule reference](${f.helpUrl}).` : ''}
+_No bespoke remediation authored for \`${codeInline(f.id)}\` yet._${f.helpUrl ? ` See the [axe rule reference](${f.helpUrl}).` : ''}
 `
 
       return `### ${i + 1}. ${mdxSafe(f.title)}
@@ -232,7 +252,7 @@ _No bespoke remediation authored for \`${mdxSafe(f.id)}\` yet._${f.helpUrl ? ` S
 
 | | |
 | --- | --- |
-| **Rule** | \`${mdxSafe(f.id)}\` |
+| **Rule** | \`${codeInline(f.id)}\` |
 | **Detected by** | ${f.source} |
 | **Occurrences** | ${f.count} |
 | **Viewports** | ${f.viewports.join(', ')} |
