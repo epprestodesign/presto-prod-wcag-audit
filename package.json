@@ -8,11 +8,15 @@
     "capture": "node capture/scrape.mjs",
     "audit": "node capture/audit.mjs",
     "report": "node capture/report.mjs",
-    "pipeline": "pnpm capture && pnpm audit && pnpm report",
+    "pipeline": "pnpm capture && pnpm audit && pnpm analyze && pnpm tokens && pnpm foundations && pnpm report",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build -o storybook-static",
     "test-storybook": "test-storybook --url http://127.0.0.1:6006",
-    "a11y:ci": "concurrently -k -s first -n SB,A11Y \"http-server storybook-static -p 6006 -a 127.0.0.1 -s\" \"wait-on -t 60000 tcp:127.0.0.1:6006 && pnpm test-storybook\""
+    "a11y:ci": "concurrently -k -s first -n SB,A11Y \"http-server storybook-static -p 6006 -a 127.0.0.1 -s\" \"wait-on -t 60000 tcp:127.0.0.1:6006 && pnpm test-storybook\"",
+    "tokens": "node capture/tokens.mjs",
+    "foundations": "node capture/foundations.mjs",
+    "analyze": "node capture/analyze.mjs",
+    "focus-check": "node capture/focus-check.mjs"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "10.5.5",

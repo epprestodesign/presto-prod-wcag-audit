@@ -1,0 +1,121 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Every type style production actually renders, measured from computed styles across all
+captured pages. **43 distinct combinations** of family, size and weight.
+
+## Families
+
+| Family | Elements | Notes |
+| --- | --- | --- |
+| PT Sans | 2251 | Primary UI face (`presto.eventpipe.com`) |
+| Material Icons | 1672 | Icon font — ligature text is read aloud unless the glyph is `aria-hidden` |
+| Product Sans | 159 | Checkout only (`app.eventpipe.com`) |
+| Roboto | 51 | Third-party (Google Maps controls) |
+
+Two different primary faces ship across the journey — **PT Sans** on search and hotel
+detail, **Product Sans** on checkout — which is a consequence of the two-application split
+rather than a deliberate type system.
+
+## Type scale
+
+Sorted largest to smallest. `LH ratio` is line-height ÷ font-size.
+
+| Size | Weight | LH | LH ratio | Family | Uses | Example |
+| --- | --- | --- | --- | --- | --- | --- |
+| 38px | 400 | 38px | 1 | Material Icons | 6 | schedule |
+| 36px | 700 | 54px | 1.5 | PT Sans | 2 | Spark by Hilton Exton |
+| 32px | 700 | 48px | 1.5 | PT Sans | 4 | 2026 - Fall Continental Cup |
+| 32px | 500 | 38.4px | 1.2 | Product Sans | 1 | 2026 - Fall Continental Cup |
+| 28px | 700 | 42px | 1.5 | PT Sans | 8 | Select Your Room |
+| 25px | 400 | 25px | 1 | Material Icons | 2 | arrow_back |
+| 24px | 400 | 24px | 1 | Material Icons | 199 | arrow_drop_down |
+| 24px | 700 | 36px | 1.5 | PT Sans | 6 | Sat, 11/7/2026 - Sun, 11/8/2026 |
+| 22px | 700 | 33px | 1.5 | PT Sans | 6 | About this property |
+| 20px | 400 | 20px | 1 | Material Icons | 14 | location_on |
+| 20px | 500 | 24px | 1.2 | Product Sans | 5 | Spark by Hilton Exton |
+| 20px | 700 | 32px | 1.6 | Product Sans | 2 | Manage Your Reservation or Group Block |
+| 18px | 400 | 18px | 1 | Material Icons | 714 | attach_money |
+| 18px | 700 | 27px | 1.5 | PT Sans | 174 | Search by Property Name |
+| 18px | 500 | 27px | 1.5 | Product Sans | 8 | 1. Guest Information |
+| 18px | 500 | normal | — | Roboto | 1 | Map |
+| 17.2px | 400 | 17.15px | 1 | Material Icons | 1 | close |
+| 16px | 700 | 28px | 1.75 | PT Sans | 152 | $635.96 USD total |
+| 16px | 400 | 16px | 1 | Material Icons | 56 | error |
+| 16px | 400 | 24px | 1.5 | PT Sans | 10 | Team Travel Source is the official housi |
+| 16px | 500 | 19.2px | 1.2 | Product Sans | 4 | Reservation Summary |
+| 16px | 700 | 19.2px | 1.2 | Product Sans | 2 | Two Queen Beds - Guest Room |
+| 16px | 700 | 24px | 1.5 | Roboto | 1 | West Bradford Township, PA |
+| 15px | 300 | 22.5px | 1.5 | Product Sans | 8 | Maximum Occupancy: 4 |
+| 14px | 400 | 17.5px | 1.25 | PT Sans | 961 | Booking Type |
+| 14px | 400 | 14px | 1 | Material Icons | 680 | star |
+| 14px | 500 | 24.01px | 1.72 | PT Sans | 222 | Contact us |
+| 14px | 700 | 21px | 1.5 | PT Sans | 178 | Hours |
+| 14px | 400 | normal | — | Roboto | 45 | Sunday: 2030 |
+| 14px | 300 | 21px | 1.5 | Product Sans | 34 | Contact Us |
+| 14px | 700 | 21px | 1.5 | Product Sans | 22 | Room Cost |
+| 14px | 400 | 21px | 1.5 | Product Sans | 8 | 3.5 Stars |
+| 14px | 500 | 24.01px | 1.72 | Product Sans | 2 | Look Up |
+| 13px | 700 | 19.5px | 1.5 | Product Sans | 4 | Time remaining: |
+| 13px | 400 | 19.5px | 1.5 | Product Sans | 2 | Reserve before time runs out! |
+| 12.8px | 700 | 19.2px | 1.5 | PT Sans | 2 | Sat, 11/7/2026 - Sun, 11/8/2026 |
+| 12.8px | 400 | 19.2px | 1.5 | Product Sans | 1 | Sat, 11/07/2026 - Sun, 11/08/2026 |
+| 12px | 400 | 18px | 1.5 | PT Sans | 366 | miles |
+| 12px | 700 | 18px | 1.5 | PT Sans | 160 | Preferred Hotel |
+| 12px | 400 | 18px | 1.5 | Product Sans | 24 | # of occupants |
+| 12px | 300 | 18px | 1.5 | Product Sans | 16 | All fields marked with are required. |
+| 11px ⚠️ | 400 | 16.5px | 1.5 | Product Sans | 16 | First Name (Primary Guest) |
+| 10px ⚠️ | 400 | 14px | 1.4 | Roboto | 4 | Keyboard shortcuts |
+
+## Findings
+
+### Text below 12px
+
+2 styles render below 12px:
+
+| Size | Family | Uses | Example |
+| --- | --- | --- | --- |
+| 11px | Product Sans | 16 | First Name (Primary Guest) |
+| 10px | Roboto | 4 | Keyboard shortcuts |
+
+WCAG sets no absolute minimum font size, so this is **not a conformance failure on its own**.
+It matters for two other reasons: small text makes the 1.4.3 contrast threshold harder to
+meet in practice, and it interacts with **1.4.4 Resize Text** — the page must stay usable at
+200% zoom, and text this small is often paired with fixed-height containers that clip when
+scaled.
+
+### Line height
+
+WCAG **1.4.12 Non-text Contrast / Text Spacing (AA)** requires that content survive a
+user stylesheet setting line-height to **1.5×** font size. 10 body-size styles currently ship below that ratio, so any fixed-height container around them should be re-checked with 1.5 applied:
+
+| Size | Weight | LH ratio | Uses | Example |
+| --- | --- | --- | --- | --- |
+| 20px | 400 | 1 | 14 | location_on |
+| 20px | 500 | 1.2 | 5 | Spark by Hilton Exton |
+| 18px | 400 | 1 | 714 | attach_money |
+| 17.2px | 400 | 1 | 1 | close |
+| 16px | 400 | 1 | 56 | error |
+| 16px | 500 | 1.2 | 4 | Reservation Summary |
+| 16px | 700 | 1.2 | 2 | Two Queen Beds - Guest Room |
+| 14px | 400 | 1.25 | 961 | Booking Type |
+| 14px | 400 | 1 | 680 | star |
+| 10px | 400 | 1.4 | 4 | Keyboard shortcuts |
+
+The criterion is about *tolerating* 1.5, not shipping it — a tight default is fine provided
+nothing clips or overlaps when the user forces the larger value.
+
+### Icon font text
+
+**Material Icons** accounts for 1672 elements. The glyph is
+selected by a text ligature — the element literally contains the word `arrow_left`,
+`search`, `star`. Where the icon is not marked `aria-hidden="true"`, screen readers
+announce that raw ligature. This is the mechanism behind the `button-name` failures in the
+journey findings: the accessible name resolves to `"arrow_drop_down"` rather than a label.
+
+---
+
+_Generated from `snapshots/tokens.json` by `capture/foundations.mjs`._

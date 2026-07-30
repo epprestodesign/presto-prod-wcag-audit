@@ -24,6 +24,8 @@ const preview = {
         order: [
           'Getting Started',
           ['Introduction', 'How to Read a Finding', 'Methodology', 'Scorecard'],
+          'Foundations',
+          ['Colors', 'Typography', 'Color Contrast'],
           'Journeys',
           [
             'Landing',

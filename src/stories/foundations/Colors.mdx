@@ -1,0 +1,79 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+The palette **as production actually paints it**, harvested from the computed styles of
+every visible text element across all captured pages — not from the stylesheet.
+
+That distinction matters. Parsing the CSS would enumerate every colour the codebase
+*declares*, including dead rules, Quasar defaults nothing instantiates, and utility
+classes no template applies. This list contains only colours a real element really
+renders, and the counts tell you how much of the UI a change would move.
+
+**30 distinct colours** in use across 40 real
+foreground/background pairings.
+
+## Text colors
+
+22 colours are used for text.
+
+| | Hex | Text uses | Also used as background |
+| --- | --- | --- | --- |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#01123D',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#01123D` | 1863 | 220 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#FFFFFF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#FFFFFF` | 725 | 2980 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#00008B',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#00008B` | 400 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#4CAF50',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#4CAF50` | 314 | 2 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#000000',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#000000` | 191 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#9E9E9E',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#9E9E9E` | 146 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#F9A825',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#F9A825` | 144 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#008000',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#008000` | 112 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#212529',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#212529` | 66 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#F44336',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#F44336` | 36 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#F86969',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#F86969` | 22 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#6C757D',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#6C757D` | 20 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#2561FA',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#2561FA` | 19 | 4 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#666666',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#666666` | 16 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#0000EE',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#0000EE` | 12 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#757575',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#757575` | 11 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#007BFF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#007BFF` | 11 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#8C92A0',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#8C92A0` | 8 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#212121',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#212121` | 7 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#737373',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#737373` | 6 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#FFA000',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#FFA000` | 2 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#2A2D33',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#2A2D33` | 2 | — |
+
+## Background colors
+
+12 colours appear behind text.
+
+| | Hex | Background uses | Also used as text |
+| --- | --- | --- | --- |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#FFFFFF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#FFFFFF` | 2980 | 725 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#00A87E',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#00A87E` | 320 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#F9F9FA',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#F9F9FA` | 229 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#01123D',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#01123D` | 220 | 1863 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#808080',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#808080` | 160 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#D9ECD9',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#D9ECD9` | 112 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#D9EBFF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#D9EBFF` | 80 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#F8FAFF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#F8FAFF` | 6 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#2561FA',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#2561FA` | 4 | 19 |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#E5E3DF',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#E5E3DF` | 4 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#484D6C',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#484D6C` | 4 | — |
+| <span style={{display:'inline-block',width:14,height:14,borderRadius:3,background:'#4CAF50',border:'1px solid rgba(0,0,0,.25)',verticalAlign:'middle',marginRight:6}} /> | `#4CAF50` | 2 | 314 |
+
+## Observations
+
+- **The status palette is the problem.** Availability state is carried almost entirely by
+  hue — `#4CAF50` available, `#F9A825` waitlist, `#F44336` unavailable — and every one of
+  those fails AA as text on white. See **Color Contrast** for the numbers.
+- Because that state is signalled by colour, it also raises **1.4.1 Use of Color** (Level A):
+  the meaning must survive when hue is not perceivable. Adding an icon or text prefix fixes
+  1.4.1 and darkening the hue fixes 1.4.3 — both are needed, neither substitutes for the other.
+- Greys are used at several near-identical values (`#9E9E9E`, `#8C92A0`, `#6C757D`, `#666666`).
+  Consolidating them into a single accessible ramp would remove failures and shrink the palette.
+
+---
+
+_Generated from `snapshots/tokens.json` by `capture/foundations.mjs`._
