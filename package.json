@@ -10,16 +10,23 @@
     "report": "node capture/report.mjs",
     "pipeline": "pnpm capture && pnpm audit && pnpm report",
     "storybook": "storybook dev -p 6007",
-    "build-storybook": "storybook build -o storybook-static"
+    "build-storybook": "storybook build -o storybook-static",
+    "test-storybook": "test-storybook --url http://127.0.0.1:6006",
+    "a11y:ci": "concurrently -k -s first -n SB,A11Y \"http-server storybook-static -p 6006 -a 127.0.0.1 -s\" \"wait-on -t 60000 tcp:127.0.0.1:6006 && pnpm test-storybook\""
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^10.4.6",
-    "@storybook/addon-docs": "^10.4.6",
-    "@storybook/html-vite": "^10.4.6",
+    "@storybook/addon-a11y": "10.5.5",
+    "@storybook/addon-docs": "10.5.5",
+    "@storybook/html-vite": "10.5.5",
+    "@storybook/test-runner": "^0.24.4",
     "axe-core": "^4.10.2",
+    "axe-playwright": "^2.2.2",
+    "concurrently": "^10.0.4",
+    "http-server": "^14.1.1",
     "playwright": "^1.62.0",
     "remark-gfm": "^4.0.1",
-    "storybook": "^10.4.6",
-    "vite": "^6.0.0"
+    "storybook": "10.5.5",
+    "vite": "^6.0.0",
+    "wait-on": "^9.1.0"
   }
 }

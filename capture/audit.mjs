@@ -179,6 +179,20 @@ for (const target of targets) {
 await browser.close()
 
 // Roll up: one row per (rule x page x viewport), plus a rule-level summary.
+//
+// A filtered run (`pnpm audit -- landing`) must not clobber the pages it did not
+// visit. Carry forward every finding for a page outside this run's scope, then
+// let the freshly-audited pages replace their own rows.
+if (filters.length) {
+  const auditedPages = new Set(targets.map((t) => t.id))
+  const previous = (await exists(join(SNAP, 'findings.json')))
+    ? JSON.parse(await readFile(join(SNAP, 'findings.json'), 'utf8')).findings ?? []
+    : []
+  const carried = previous.filter((f) => !auditedPages.has(f.page))
+  all.unshift(...carried)
+  if (carried.length) console.log(`\n(carried forward ${carried.length} finding(s) from pages outside this run)`)
+}
+
 const byRule = {}
 for (const f of all) {
   byRule[f.rule] ??= { rule: f.rule, impact: f.impact, level: f.level, sc: f.sc, help: f.help, helpUrl: f.helpUrl, nodes: 0, pages: new Set() }

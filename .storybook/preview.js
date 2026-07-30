@@ -26,6 +26,7 @@ const preview = {
           ['Introduction', 'How to Read a Finding', 'Methodology', 'Scorecard'],
           'Journeys',
           [
+            'Landing',
             'Browse & Search',
             'Hotel Details',
             'Checkout',

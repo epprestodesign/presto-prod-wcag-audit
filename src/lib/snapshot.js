@@ -69,13 +69,24 @@ export function renderSnapshot({ journey, id, viewport = 'desktop', width } = {}
 
   const vp = m?.viewports?.[viewport]
   const renderWidth = width ?? (viewport === 'mobile' ? 390 : 1440)
+  const renderHeight = viewport === 'mobile' ? 844 : 900
 
   // The host is sized to the captured viewport so media queries and any
   // width-dependent layout resolve exactly as they did on the real device.
+  //
+  // min-height matters as much as width. `contain: layout` on :host (below)
+  // makes the host a containing block for fixed-position descendants — which is
+  // what keeps overlays inside the snapshot instead of escaping across
+  // Storybook's chrome. But a page whose content is *entirely* fixed-position,
+  // like the open map overlay, then has no in-flow content to give the host
+  // height: it collapses to its border and renders as a 2px sliver. Flooring it
+  // at the captured viewport height gives that content somewhere to lay out,
+  // while taller pages still grow past it naturally.
   const host = document.createElement('div')
   host.setAttribute('data-snapshot', `${journey}/${id}/${viewport}`)
-  host.style.cssText = `width:${renderWidth}px;max-width:100%;margin:0 auto;overflow:hidden;` +
-    'border:1px solid #e3e3ea;border-radius:6px;background:#fff'
+  host.style.cssText =
+    `width:${renderWidth}px;min-height:${renderHeight}px;max-width:100%;margin:0 auto;` +
+    'position:relative;overflow:hidden;border:1px solid #e3e3ea;border-radius:6px;background:#fff'
 
   const root = host.attachShadow({ mode: 'open' })
 
@@ -94,7 +105,47 @@ export function renderSnapshot({ journey, id, viewport = 'desktop', width } = {}
   wrapper.innerHTML = markup
   root.appendChild(wrapper)
 
-  return host
+  const frame = document.createElement('div')
+  frame.appendChild(captureNotice(vp?.finalUrl))
+  frame.appendChild(host)
+  return frame
+}
+
+/**
+ * Banner marking a story as a static capture.
+ *
+ * Without it these read as a live app, and the first thing anyone does is click
+ * something — the map overlay's close button being the obvious trap, since the
+ * map is captured mid-overlay and looks stuck rather than frozen.
+ *
+ * This is the one piece of our own markup inside the audited region, so it is
+ * built to contribute zero findings: no interactive elements, a real heading-free
+ * text node, and #30303d on #eef0f4 (11.4:1, clears AA and AAA). If it ever did
+ * fail a rule it would show up as a finding against the page under audit, which
+ * would be worse than useless.
+ */
+function captureNotice(finalUrl) {
+  const bar = document.createElement('div')
+  bar.setAttribute('data-capture-notice', '')
+  bar.style.cssText =
+    'display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap;' +
+    'max-width:1440px;margin:0 auto .5rem;padding:.5rem .75rem;' +
+    'font:500 12px/1.5 ui-sans-serif,system-ui,sans-serif;' +
+    'color:#30303d;background:#eef0f4;border:1px solid #d3d7e0;border-radius:6px'
+  const strong = document.createElement('span')
+  strong.textContent = 'Static capture'
+  strong.style.cssText = 'font-weight:700'
+  const rest = document.createElement('span')
+  rest.textContent =
+    'Production JavaScript is stripped, so nothing here is interactive — buttons, dropdowns and overlay close controls do nothing. Overlays appear in the state they were captured in.'
+  bar.append(strong, rest)
+  if (finalUrl) {
+    const src = document.createElement('span')
+    src.textContent = finalUrl.replace(/^https?:\/\//, '')
+    src.style.cssText = 'font-family:ui-monospace,monospace;color:#4a4a5c;word-break:break-all'
+    bar.append(src)
+  }
+  return bar
 }
 
 /** Story factory: `render` for a captured page. */

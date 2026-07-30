@@ -1,0 +1,297 @@
+{
+  "desktop": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".footer-link"
+              ]
+            ],
+            "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#f9f9fa",
+              "contrastRatio": 3.78,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 1,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".big-text"
+              ]
+            ],
+            "html": "<div data-v-cde1889a=\"\" class=\"big-text\">2026 - Fall Continental Cup</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "24.0pt (32px)",
+              "fontWeight": "bold",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "3:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".small-text"
+              ]
+            ],
+            "html": "<div data-v-cde1889a=\"\" class=\"small-text\">Sat, 11/7/2026 - Sun, 11/8/2026</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "18.0pt (24px)",
+              "fontWeight": "bold",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "3:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".text-primary.ellipsis[data-v-96f40205=\"\"]"
+              ]
+            ],
+            "html": "<div data-v-96f40205=\"\" class=\"text-primary ellipsis\">1 Traveler, 1 Room</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-btn--unelevated > .q-btn__content.text-center.q-anchor--skip"
+              ]
+            ],
+            "html": "<span class=\"q-btn__content text-center col items-center q-anchor--skip justify-center row\">Search</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 4,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "help": "Buttons must have discernible text",
+        "description": "Ensure buttons have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "div[data-v-8aaf5340=\"\"]:nth-child(2) > .q-btn--flat.q-btn--actionable[type=\"button\"]"
+              ]
+            ],
+            "html": "<button data-v-8aaf5340=\"\" class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-primary q-btn--actionable q-focusable q-hoverable\" tabindex=\"0\" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 1,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".footer-link"
+              ]
+            ],
+            "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#f9f9fa",
+              "contrastRatio": 3.78,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 1,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".big-text"
+              ]
+            ],
+            "html": "<div data-v-cde1889a=\"\" class=\"big-text\">2026 - Fall Continental Cup</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "24.0pt (32px)",
+              "fontWeight": "bold",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "3:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".small-text"
+              ]
+            ],
+            "html": "<div data-v-cde1889a=\"\" class=\"small-text\">Sat, 11/7/2026 - Sun, 11/8/2026</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "18.0pt (24px)",
+              "fontWeight": "bold",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "3:1"
+            }
+          }
+        ],
+        "totalNodes": 2,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  }
+}

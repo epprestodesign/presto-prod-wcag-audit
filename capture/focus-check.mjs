@@ -24,7 +24,7 @@
 // Writes snapshots/focus.json.
 
 import { chromium } from 'playwright'
-import { readFile, writeFile } from 'node:fs/promises'
+import { readFile, writeFile, access } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve, join } from 'node:path'
 
@@ -205,5 +205,17 @@ for (const target of targets) {
 }
 
 await browser.close()
-await writeFile(join(SNAP, 'focus.json'), JSON.stringify({ generatedAt: new Date().toISOString(), pages: out }, null, 2))
+
+// A filtered run must not drop the pages it did not walk: merge over whatever is
+// already on disk so `node capture/focus-check.mjs event-landing` adds a page
+// rather than replacing the whole file.
+let merged = out
+if (filters.length && (await access(join(SNAP, 'focus.json')).then(() => true, () => false))) {
+  const prev = JSON.parse(await readFile(join(SNAP, 'focus.json'), 'utf8')).pages ?? {}
+  merged = { ...prev, ...out }
+  const carried = Object.keys(prev).filter((k) => !(k in out)).length
+  if (carried) console.log(`(carried forward ${carried} page(s) from a previous run)`)
+}
+
+await writeFile(join(SNAP, 'focus.json'), JSON.stringify({ generatedAt: new Date().toISOString(), pages: merged }, null, 2))
 console.log('\nWrote snapshots/focus.json\n')

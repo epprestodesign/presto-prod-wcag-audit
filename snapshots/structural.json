@@ -1,12 +1,306 @@
 {
-  "generatedAt": "2026-07-30T16:50:37.074Z",
+  "generatedAt": "2026-07-30T18:01:57.668Z",
   "byImpact": {
-    "critical": 15,
-    "serious": 41,
-    "moderate": 6,
+    "critical": 17,
+    "serious": 46,
+    "moderate": 8,
     "minor": 0
   },
   "findings": [
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 68 interactive elements"
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: main, footer"
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "id": "focus-not-visible",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.4.7"
+      ],
+      "title": "6 focusable elements produce no visible change when focused",
+      "detail": "Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.",
+      "evidence": [
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "4 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Booking Type\" — 1x1px",
+        "input \"Age Divsion\" — 1x1px",
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Booking Type",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > div > div > div:nth-of-type(3) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Age Divsion",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > main > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 66 interactive elements"
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: aside, main, footer"
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "4 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Booking Type\" — 1x1px",
+        "input \"Age Divsion\" — 1x1px",
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Booking Type",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > div > div > div:nth-of-type(3) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Age Divsion",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > main > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
     {
       "journey": "browse",
       "page": "search-results",

@@ -28,6 +28,16 @@
 
   "targets": [
     {
+      "id": "event-landing",
+      "journey": "landing",
+      "title": "Event Landing",
+      "order": 10,
+      "auth": "none",
+      "description": "Event entry point — hero, event branding, and the initial search form. First page in the journey; everything else is reached from here.",
+      "url": "https://presto.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/",
+      "settleMs": 4500
+    },
+    {
       "id": "search-results",
       "journey": "browse",
       "title": "Search Results",

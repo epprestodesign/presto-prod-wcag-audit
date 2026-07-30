@@ -1,0 +1,58 @@
+name: WCAG 2.2 AA
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      strict:
+        description: 'Fail the run on any violation'
+        type: boolean
+        default: false
+
+jobs:
+  a11y:
+    name: axe-core audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    env:
+      # Advisory by default: the stories are verbatim captures of production
+      # pages that are known to fail, so a red build on every PR would carry no
+      # signal. Flip to 'true' — here or via workflow_dispatch — once remediated
+      # snapshots exist and the gate should hold the line against regressions.
+      A11Y_STRICT: ${{ inputs.strict && 'true' || 'false' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # --with-deps pulls the system libraries headless Chromium needs on the
+      # runner; the browser binary alone is not enough on ubuntu-latest.
+      - name: Install Playwright Chromium
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+
+      # Serves the static build on 127.0.0.1:6006, waits for the port, then runs
+      # the test-runner against it. `concurrently -k -s first` tears the server
+      # down as soon as the test process settles.
+      - name: Run WCAG audit
+        run: pnpm a11y:ci
+
+      - name: Upload Storybook build
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-static
+          path: storybook-static
+          retention-days: 7

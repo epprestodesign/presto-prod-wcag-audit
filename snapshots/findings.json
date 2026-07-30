@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T16:40:08.691Z",
+  "generatedAt": "2026-07-30T17:58:12.929Z",
   "summary": [
     {
       "rule": "color-contrast",
@@ -10,8 +10,10 @@
       ],
       "help": "Elements must meet minimum color contrast ratio thresholds",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
-      "nodes": 546,
+      "nodes": 548,
       "pages": [
+        "event-landing:desktop",
+        "event-landing:mobile",
         "search-results:desktop",
         "search-results:mobile",
         "search-map:desktop",
@@ -33,8 +35,9 @@
       ],
       "help": "Buttons must have discernible text",
       "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI",
-      "nodes": 166,
+      "nodes": 167,
       "pages": [
+        "event-landing:mobile",
         "search-results:desktop",
         "search-results:mobile",
         "search-map:desktop",
@@ -139,6 +142,106 @@
     }
   ],
   "findings": [
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "desktop",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "1.4.3"
+      ],
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+      "nodeCount": 1,
+      "nodes": [
+        {
+          "target": [
+            [
+              "div[data-snapshot=\"1\"]",
+              ".footer-link"
+            ]
+          ],
+          "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+          "data": {
+            "fgColor": "#007bff",
+            "bgColor": "#f9f9fa",
+            "contrastRatio": 3.78,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "rule": "button-name",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2"
+      ],
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI",
+      "nodeCount": 1,
+      "nodes": [
+        {
+          "target": [
+            [
+              "div[data-snapshot=\"1\"]",
+              "div[data-v-8aaf5340=\"\"]:nth-child(2) > .q-btn--flat.q-btn--actionable[type=\"button\"]"
+            ]
+          ],
+          "html": "<button data-v-8aaf5340=\"\" class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-primary q-btn--actionable q-focusable q-hoverable\" tabindex=\"0\" type=\"button\">",
+          "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+          "data": null
+        }
+      ]
+    },
+    {
+      "journey": "landing",
+      "page": "event-landing",
+      "pageTitle": "Event Landing",
+      "viewport": "mobile",
+      "rule": "color-contrast",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "1.4.3"
+      ],
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+      "nodeCount": 1,
+      "nodes": [
+        {
+          "target": [
+            [
+              "div[data-snapshot=\"1\"]",
+              ".footer-link"
+            ]
+          ],
+          "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+          "data": {
+            "fgColor": "#007bff",
+            "bgColor": "#f9f9fa",
+            "contrastRatio": 3.78,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "bold",
+            "messageKey": null,
+            "expectedContrastRatio": "4.5:1"
+          }
+        }
+      ]
+    },
     {
       "journey": "browse",
       "page": "search-results",

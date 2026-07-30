@@ -29,6 +29,7 @@ const structural = (await exists(join(SNAP, 'structural.json')))
   : { findings: [] }
 
 const JOURNEY_TITLES = {
+  landing: 'Landing',
   browse: 'Browse & Search',
   details: 'Hotel Details',
   checkout: 'Checkout',
