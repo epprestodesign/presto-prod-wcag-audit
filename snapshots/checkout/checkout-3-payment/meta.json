@@ -1,0 +1,22 @@
+{
+  "id": "checkout-3-payment",
+  "journey": "checkout",
+  "title": "3. Payment Information",
+  "order": 30,
+  "auth": "none",
+  "description": "Step 3. Card entry and billing address. CAPTURED ONLY - never submitted.",
+  "url": null,
+  "note": "Requires completing steps 1-2. Supply a URL or leave for flow capture.",
+  "settleMs": 3000,
+  "capturedAt": "2026-07-30T16:38:14.453Z",
+  "viewports": {
+    "desktop": {
+      "status": "pending",
+      "reason": "Requires completing steps 1-2. Supply a URL or leave for flow capture."
+    },
+    "mobile": {
+      "status": "pending",
+      "reason": "Requires completing steps 1-2. Supply a URL or leave for flow capture."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "checkout-2-protection",
+  "journey": "checkout",
+  "title": "2. Housing Protection",
+  "order": 20,
+  "auth": "none",
+  "description": "Step 2. Housing Protection opt-in/opt-out.",
+  "url": null,
+  "note": "Requires completing step 1. Supply a URL or leave for flow capture.",
+  "settleMs": 3000,
+  "capturedAt": "2026-07-30T16:38:14.369Z",
+  "viewports": {
+    "desktop": {
+      "status": "pending",
+      "reason": "Requires completing step 1. Supply a URL or leave for flow capture."
+    },
+    "mobile": {
+      "status": "pending",
+      "reason": "Requires completing step 1. Supply a URL or leave for flow capture."
+    }
+  }
+}

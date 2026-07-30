@@ -1,0 +1,91 @@
+{
+  "event": {
+    "name": "2026 - Fall Continental Cup",
+    "organization": "Team Travel Source (TTS)",
+    "eventId": "9f16e139-935b-48f6-80cf-da2628b33b9c",
+    "shopKey": "6a6b786d5171a074d8784f55"
+  },
+  "capturedAt": "2026-07-30T16:38:24.138Z",
+  "summary": [
+    {
+      "id": "search-results",
+      "journey": "browse",
+      "statuses": {
+        "desktop": "ok",
+        "mobile": "ok"
+      }
+    },
+    {
+      "id": "search-map",
+      "journey": "browse",
+      "statuses": {
+        "desktop": "ok",
+        "mobile": "ok"
+      }
+    },
+    {
+      "id": "hotel-detail",
+      "journey": "details",
+      "statuses": {
+        "desktop": "ok",
+        "mobile": "ok"
+      }
+    },
+    {
+      "id": "checkout-1-guests",
+      "journey": "checkout",
+      "statuses": {
+        "desktop": "ok",
+        "mobile": "ok"
+      }
+    },
+    {
+      "id": "checkout-2-protection",
+      "journey": "checkout",
+      "statuses": {
+        "desktop": "pending",
+        "mobile": "pending"
+      }
+    },
+    {
+      "id": "checkout-3-payment",
+      "journey": "checkout",
+      "statuses": {
+        "desktop": "pending",
+        "mobile": "pending"
+      }
+    },
+    {
+      "id": "checkout-4-policies",
+      "journey": "checkout",
+      "statuses": {
+        "desktop": "pending",
+        "mobile": "pending"
+      }
+    },
+    {
+      "id": "confirmation",
+      "journey": "confirmation",
+      "statuses": {
+        "desktop": "pending",
+        "mobile": "pending"
+      }
+    },
+    {
+      "id": "manage-booking-lookup",
+      "journey": "managebooking",
+      "statuses": {
+        "desktop": "ok",
+        "mobile": "ok"
+      }
+    },
+    {
+      "id": "manage-booking-detail",
+      "journey": "managebooking",
+      "statuses": {
+        "desktop": "pending",
+        "mobile": "pending"
+      }
+    }
+  ]
+}

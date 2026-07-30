@@ -1,0 +1,133 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Getting Started/Methodology" />
+
+# Methodology
+
+How the evidence in this audit was produced, and how to extend it.
+
+## Pipeline
+
+```bash
+pnpm capture     # Playwright: render each page, extract DOM + CSS + inventory
+pnpm audit       # axe-core against every snapshot, both viewports
+pnpm report      # generate the Storybook stories and findings pages
+pnpm storybook   # browse the result
+```
+
+Two further steps are run on demand because they hit the live site:
+
+```bash
+node capture/focus-check.mjs   # empirical keyboard focus traversal
+node capture/analyze.mjs       # structural findings beyond axe
+```
+
+## Capture
+
+`capture/scrape.mjs` drives headless Chromium. For each target and viewport it:
+
+1. Navigates, waits for network idle, then waits a per-target settle interval.
+2. Reflects live form values into attributes — the DOM holds user-typed values as IDL
+   properties only, so a naive `outerHTML` loses the filled-in state that makes validation
+   snapshots meaningful.
+3. Serializes `document.documentElement.outerHTML`. The served HTML is useless here: the
+   search app is a client-rendered SPA whose served markup is an empty `<div id="app">`.
+   The audit has to see what the browser actually builds.
+4. Serializes every applied stylesheet via CSSOM, re-fetching cross-origin sheets over the
+   network where `cssRules` access throws.
+5. Records an inventory: interactive elements with their naming attributes, the heading
+   outline, landmarks, images, and measured geometry.
+6. Screenshots the full page.
+
+### Post-processing
+
+Captured markup is sanitized before it is committed:
+
+- **Scripts removed** — these are static snapshots; running the production bundle would
+  re-hydrate the SPA and mutate the DOM under audit.
+- **URLs absolutized** so images and fonts still resolve off-origin. This handles
+  `url(&quot;…&quot;)` — inside a `style` attribute the quotes arrive HTML-escaped, and a
+  naive absolute-URL test misreads the value as relative and corrupts it.
+- **CSS retargeted at the shadow root**: `html`, `body` and `:root` select nothing inside a
+  shadow tree, so rules hung off them — including the custom-property definitions the whole
+  theme depends on — would silently drop. They are rewritten to `:host`.
+- **`@font-face` hoisted** to the document, where it is inert inside a shadow root.
+
+## Two viewports
+
+Desktop 1440px and mobile 390px are audited separately, not because the CSS differs — the
+breakpoints live inside one stylesheet — but because **the rendered result differs**, and
+several criteria can only be assessed at the narrow width: 1.4.10 Reflow, 2.5.8 Target Size,
+and any contrast issue arising from a different stacking order.
+
+## Focus measurement
+
+`capture/focus-check.mjs` is deliberately empirical. It runs two passes:
+
+- **Pass A** tabs through the live page with real key presses, recording each stop's
+  geometry, scroll position and a screenshot of its box.
+- **Pass B** reloads, scrolls to the same positions, and re-shoots the identical clips with
+  nothing focused.
+
+Diffing the two measures what a sighted keyboard user actually sees.
+
+It runs in two passes rather than blurring between shots because blurring mid-traversal means
+restoring focus to continue tabbing, and any restore-by-index is wrong the moment `tabindex`,
+iframes or widget-internal focus management reorder things — the traversal silently sticks on
+one element and reports it dozens of times. An earlier single-pass version did exactly that,
+reporting 69 failures on the map page that were one element counted repeatedly.
+
+Repeated landings on the same element are now treated as a **focus trap** (WCAG 2.1.2) and
+stop the traversal, rather than being counted as many findings.
+
+## Severity
+
+Impact ratings follow axe-core's scale — `critical`, `serious`, `moderate`, `minor` — and
+structural findings are rated on the same scale by the barrier they create:
+
+- **critical** — blocks task completion for an affected user (unlabelled payment field,
+  uncontrollable time limit, focus trap).
+- **serious** — makes the task substantially harder but not impossible (no headings, no skip
+  link, failing contrast).
+- **moderate** — degrades the experience or fails a criterion with a workaround available.
+
+Where a finding maps to a Level A criterion, that is called out: Level A failures are the
+legal floor under the ADA, Section 508 and EN 301 549.
+
+## Adding the pending pages
+
+Three pages need access this audit does not have. To add one:
+
+1. Reach the page in a browser and copy its URL.
+2. Paste it into the matching entry in `capture/targets.json`.
+3. For cookie-gated pages, save a Playwright storage state to `capture/auth.json`:
+
+   ```bash
+   npx playwright open --save-storage=capture/auth.json https://app.eventpipe.com
+   ```
+
+   Log in in the window that opens, then close it. Targets marked `"auth": "session"` will
+   use it automatically.
+4. Re-run the pipeline:
+
+   ```bash
+   pnpm capture -- confirmation && pnpm audit && pnpm report
+   ```
+
+If a URL turns out to be session-bound and will not render standalone, the fallback is to
+save the rendered DOM from DevTools (`Copy → Copy outerHTML`) into
+`snapshots/<journey>/<id>/desktop.html` and run `pnpm audit` directly.
+
+## Known limitations
+
+- **No interaction in snapshots.** Dropdown menus, modal dialogs, date pickers and the map
+  are captured in their initial state. Issues inside those surfaces need either a `flow`
+  entry in `capture/targets.json` that opens them before capture, or live testing.
+- **Third-party widgets.** The support chat widget and Google Maps are audited as they
+  appear to users, but their markup is vendor-controlled and cannot be fixed in this
+  codebase — those findings are labelled with the vendor as owner.
+- **Contrast against images.** axe reports text over a background image as *incomplete*
+  rather than failing, because it cannot sample the image. The hero title is assessed
+  manually.
+- **No screen-reader transcript.** Name-role-value is assessed from the accessibility tree,
+  which is a strong proxy but not a substitute for an NVDA or VoiceOver pass.

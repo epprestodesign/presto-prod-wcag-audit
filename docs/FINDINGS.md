@@ -1,0 +1,68 @@
+# Scorecard
+
+Production accessibility audit of the EventPipe / Presto booking journey, against
+**WCAG 2.2 Level AA**, at **1440px desktop** and **390px mobile**.
+
+## Totals
+
+| Impact | Distinct issues |
+| --- | --- |
+| Critical | 19 |
+| Serious | 31 |
+| Moderate | 3 |
+| Minor | 0 |
+
+**755** individual element occurrences across all captured pages.
+
+## By page
+
+| Journey | Page | Captured | Critical | Serious | Moderate | Elements |
+| --- | --- | --- | --- | --- | --- | --- |
+| Browse & Search | Search Results | yes | 6 | 8 | 0 | 356 |
+| Browse & Search | Search Results - Map View | yes | 5 | 7 | 0 | 329 |
+| Hotel Details | Hotel Detail | yes | 4 | 6 | 0 | 31 |
+| Checkout | 1. Guest Information | yes | 3 | 6 | 3 | 31 |
+| Checkout | 2. Housing Protection | pending | 0 | 0 | 0 | 0 |
+| Checkout | 3. Payment Information | pending | 0 | 0 | 0 | 0 |
+| Checkout | 4. Reservation Policies | pending | 0 | 0 | 0 | 0 |
+| Confirmation | Booking Confirmation | pending | 0 | 0 | 0 | 0 |
+| Manage Booking | Manage Booking - Lookup | yes | 1 | 4 | 0 | 8 |
+| Manage Booking | Manage Booking - Reservation | pending | 0 | 0 | 0 | 0 |
+
+## Automated rules failing (axe-core)
+
+| Rule | Impact | WCAG SC | Elements | Page/viewport combos |
+| --- | --- | --- | --- | --- |
+| `button-name` | critical | 4.1.2 | 166 | 6 |
+| `image-alt` | critical | 1.1.1 | 70 | 6 |
+| `label` | critical | 4.1.2 | 5 | 3 |
+| `aria-required-attr` | critical | 4.1.2 | 2 | 2 |
+| `select-name` | critical | 4.1.2 | 2 | 2 |
+| `color-contrast` | serious | 1.4.3 | 546 | 10 |
+| `target-size` | serious | 2.5.8 | 27 | 1 |
+| `aria-input-field-name` | serious | 4.1.2 | 2 | 2 |
+
+## Findings beyond automated detection
+
+These are derived from the captured DOM inventory, measured geometry, and real
+keyboard traversal. An automated rule engine reports none of them.
+
+| Finding | Impact | WCAG SC | Pages affected |
+| --- | --- | --- | --- |
+| `unlabelled-controls` | critical | 4.1.2, 3.3.2 | 8 |
+| `img-no-alt-attr` | critical | 1.1.1 | 6 |
+| `timing-adjustable` | critical | 2.2.1 | 1 |
+| `no-headings` | serious | 1.3.1 | 8 |
+| `missing-landmarks` | serious | 1.3.1 | 10 |
+| `no-skip-link` | serious | 2.4.1 | 7 |
+| `small-targets` | serious | 2.5.8 | 10 |
+| `focus-not-visible` | serious | 2.4.7 | 3 |
+| `no-lang` | serious | 3.1.1 | 2 |
+| `focus-appearance` | serious | 2.4.11 | 1 |
+| `no-h1` | moderate | 1.3.1 | 2 |
+| `heading-skip` | moderate | 1.3.1 | 2 |
+| `missing-autocomplete` | moderate | 1.3.5 | 2 |
+
+---
+
+_Generated 2026-07-30 by `capture/report.mjs`._

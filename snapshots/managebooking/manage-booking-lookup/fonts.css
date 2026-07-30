@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/productsans/v20/pxiDypQkot1TnFhsFMOfGShlEA.ttf) format('truetype');
+}
+@font-face { font-family: Ionicons; font-display: block; src: url("/assets/ionicons-BDAtaWce.woff2") format("woff2"), url("/assets/ionicons-DDYVtJZB.woff") format("woff"); font-weight: 400; font-style: normal; }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 100; src: url("/assets/KFOkCnqEu92Fr1MmgVxIIzQ-C5u4Lasg.woff") format("woff"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 300; src: url("/assets/KFOlCnqEu92Fr1MmSU5fBBc--CDXAfhRl.woff") format("woff"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src: url("/assets/KFOmCnqEu92Fr1Mu4mxM-CEBEUyyq.woff") format("woff"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 500; src: url("/assets/KFOlCnqEu92Fr1MmEU9fBBc--j0ba7u44.woff") format("woff"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src: url("/assets/KFOlCnqEu92Fr1MmWUlfBBc--7z0HfM8a.woff") format("woff"); }
+@font-face { font-family: Roboto; font-style: normal; font-weight: 900; src: url("/assets/KFOlCnqEu92Fr1MmYUtfBBc--Yv75Cvt_.woff") format("woff"); }
+@font-face { font-family: "Material Icons"; font-style: normal; font-weight: 400; font-display: block; src: url("/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ-D-x-0Q06.woff2") format("woff2"), url("/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa-Dr0goTwe.woff") format("woff"); }
+@font-face { font-family: "Material Symbols Outlined"; font-style: normal; font-weight: 100 700; font-display: block; src: url("/assets/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY-DYC24ZHY.woff2") format("woff2"), url("/assets/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1p-p_4MrImHCIJIZrDCvHeel-Dic6xH9b.woff") format("woff"); }

@@ -1,0 +1,2400 @@
+{
+  "generatedAt": "2026-07-30T16:50:37.074Z",
+  "byImpact": {
+    "critical": 15,
+    "serious": 41,
+    "moderate": 6,
+    "minor": 0
+  },
+  "findings": [
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 299 interactive elements"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: footer"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 215 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "215 tab stops before any bypass is offered",
+        "First stops: Contact us -> Manage Booking -> Manage Booking"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "32 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Sunday: 2028\" — 1x1px",
+        "div \"100% Smoke-Free Hotel\" — 172x21px",
+        "div \"Breakfast (fee $)\" — 124x21px",
+        "div \"EV Charging\" — 100x21px",
+        "div \"Exterior Corridors\" — 132x21px",
+        "div \"Free Airport Shuttle\" — 145x21px",
+        "div \"Free Breakfast\" — 113x21px",
+        "div \"Free Buffet Breakfast\" — 153x21px",
+        "div \"Free Continental Breakfast\" — 186x21px",
+        "div \"Free Grab & Go Breakfast\" — 179x21px",
+        "div \"Free Parking\" — 101x21px",
+        "div \"Handicap Accessible\" — 148x21px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Sunday: 2028",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(1) > div"
+          ],
+          "html": "<div> 100% Smoke-Free Hotel",
+          "size": "172x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div"
+          ],
+          "html": "<div> Breakfast (fee $)",
+          "size": "124x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(3) > div"
+          ],
+          "html": "<div> EV Charging",
+          "size": "100x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+          ],
+          "html": "<div> Exterior Corridors",
+          "size": "132x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(5) > div"
+          ],
+          "html": "<div> Free Airport Shuttle",
+          "size": "145x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(6) > div"
+          ],
+          "html": "<div> Free Breakfast",
+          "size": "113x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(7) > div"
+          ],
+          "html": "<div> Free Buffet Breakfast",
+          "size": "153x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(8) > div"
+          ],
+          "html": "<div> Free Continental Breakfast",
+          "size": "186x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(9) > div"
+          ],
+          "html": "<div> Free Grab & Go Breakfast",
+          "size": "179x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(10) > div"
+          ],
+          "html": "<div> Free Parking",
+          "size": "101x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(11) > div"
+          ],
+          "html": "<div> Handicap Accessible",
+          "size": "148x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(12) > div"
+          ],
+          "html": "<div> In-room Refrigerator",
+          "size": "150x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(13) > div"
+          ],
+          "html": "<div> Indoor Pool",
+          "size": "96x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(14) > div"
+          ],
+          "html": "<div> Interior Corridors",
+          "size": "129x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(15) > div"
+          ],
+          "html": "<div> Kitchenette",
+          "size": "96x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(16) > div"
+          ],
+          "html": "<div> Laundry Services (fee)",
+          "size": "157x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(17) > div"
+          ],
+          "html": "<div> Outdoor Pool",
+          "size": "106x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(18) > div"
+          ],
+          "html": "<div> Restaurant On-Site",
+          "size": "140x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > div > div"
+          ],
+          "html": "<div> miles",
+          "size": "373x16"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(1) > div"
+          ],
+          "html": "<div> Double Bed",
+          "size": "97x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(2) > div"
+          ],
+          "html": "<div> King Bed with Full Sleeper Sofa",
+          "size": "217x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(3) > div"
+          ],
+          "html": "<div> One Bedroom King Bed with Full Sleeper Sofa",
+          "size": "302x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+          ],
+          "html": "<div> One Bedroom Two Double Beds",
+          "size": "215x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(5) > div"
+          ],
+          "html": "<div> One Bedroom Two Double Beds with Full Sleeper Sofa",
+          "size": "351x21"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "desktop",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "8 <img> elements have no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png",
+        "src=https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png",
+        "src=https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png",
+        "src=https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png",
+        "src=https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.png",
+        "src=https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.png",
+        "src=https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.png",
+        "src=https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 142 interactive elements"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: aside, footer"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 90 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "90 tab stops before any bypass is offered",
+        "First stops: menu -> Sunday: 2028 Nov 05 - Nov 09 1 Traveler, 1 Room edit -> tune Filters"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "3 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Distance\" — 1x1px",
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > label > div > div > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Distance",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(3) > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Search Results",
+      "viewport": "mobile",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "24 <img> elements have no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png",
+        "src=https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png",
+        "src=https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png",
+        "src=https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png",
+        "src=https://storage.googleapis.com/eventpipe/6ff03643-2f5d-4f37-906d-0ed64c65114f.png",
+        "src=https://storage.googleapis.com/eventpipe/47ef0dbc-c2ee-49e8-9a95-c0b26db4698c.png",
+        "src=https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png",
+        "src=https://storage.googleapis.com/eventpipe/c8dc058b-3745-4b21-a838-e75348574c8f.png",
+        "src=https://storage.googleapis.com/eventpipe/0ed2321a-f5f0-4585-9bc7-cce1868aa921.png",
+        "src=https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/6ff03643-2f5d-4f37-906d-0ed64c65114f.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/47ef0dbc-c2ee-49e8-9a95-c0b26db4698c.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/c8dc058b-3745-4b21-a838-e75348574c8f.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/0ed2321a-f5f0-4585-9bc7-cce1868aa921.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/e3db1a99-54f9-4f5a-8bd4-5d69bab8e3e4.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/881e90bb-90c0-4fbd-a4b0-d423211cd2ff.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/4773d989-3c04-4904-8e1e-d865018e689a.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/27e4413e-380d-4333-b754-21dffa9ed003.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/662b99e0-ba47-414c-9a97-811bf77e929a.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/528000ed-831a-49f5-a975-ed1e94c42180.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(32) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(32) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/759f5275-214e-4ba6-8456-ee0091878115.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 360 interactive elements"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: footer, region"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 226 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "226 tab stops before any bypass is offered",
+        "First stops: Contact us -> Manage Booking -> Manage Booking"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "focus-not-visible",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.4.7"
+      ],
+      "title": "1 focusable element produces no visible change when focused",
+      "detail": "Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.",
+      "evidence": [
+        "<button> \"Keyboard shortcuts\" 87x14 — outline: auto 1px rgb(0, 95, 204)"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(4)>div>div:nth-of-type(2)>div>div:nth-of-type(2)>div>div>div:nth-of-type(1)>button"
+          ],
+          "html": "<button> Keyboard shortcuts"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "35 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Sunday: 2028\" — 1x1px",
+        "div \"100% Smoke-Free Hotel\" — 172x21px",
+        "div \"Breakfast (fee $)\" — 124x21px",
+        "div \"EV Charging\" — 100x21px",
+        "div \"Exterior Corridors\" — 132x21px",
+        "div \"Free Airport Shuttle\" — 145x21px",
+        "div \"Free Breakfast\" — 113x21px",
+        "div \"Free Buffet Breakfast\" — 153x21px",
+        "div \"Free Continental Breakfast\" — 186x21px",
+        "div \"Free Grab & Go Breakfast\" — 179x21px",
+        "div \"Free Parking\" — 101x21px",
+        "div \"Handicap Accessible\" — 148x21px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Sunday: 2028",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(1) > div"
+          ],
+          "html": "<div> 100% Smoke-Free Hotel",
+          "size": "172x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(2) > div"
+          ],
+          "html": "<div> Breakfast (fee $)",
+          "size": "124x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(3) > div"
+          ],
+          "html": "<div> EV Charging",
+          "size": "100x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+          ],
+          "html": "<div> Exterior Corridors",
+          "size": "132x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(5) > div"
+          ],
+          "html": "<div> Free Airport Shuttle",
+          "size": "145x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(6) > div"
+          ],
+          "html": "<div> Free Breakfast",
+          "size": "113x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(7) > div"
+          ],
+          "html": "<div> Free Buffet Breakfast",
+          "size": "153x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(8) > div"
+          ],
+          "html": "<div> Free Continental Breakfast",
+          "size": "186x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(9) > div"
+          ],
+          "html": "<div> Free Grab & Go Breakfast",
+          "size": "179x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(10) > div"
+          ],
+          "html": "<div> Free Parking",
+          "size": "101x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(11) > div"
+          ],
+          "html": "<div> Handicap Accessible",
+          "size": "148x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(12) > div"
+          ],
+          "html": "<div> In-room Refrigerator",
+          "size": "150x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(13) > div"
+          ],
+          "html": "<div> Indoor Pool",
+          "size": "96x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(14) > div"
+          ],
+          "html": "<div> Interior Corridors",
+          "size": "129x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(15) > div"
+          ],
+          "html": "<div> Kitchenette",
+          "size": "96x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(16) > div"
+          ],
+          "html": "<div> Laundry Services (fee)",
+          "size": "157x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(17) > div"
+          ],
+          "html": "<div> Outdoor Pool",
+          "size": "106x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div:nth-of-type(18) > div"
+          ],
+          "html": "<div> Restaurant On-Site",
+          "size": "140x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(4) > div:nth-of-type(1) > div:nth-of-type(2) > div > div"
+          ],
+          "html": "<div> miles",
+          "size": "373x16"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(1) > div"
+          ],
+          "html": "<div> Double Bed",
+          "size": "97x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(2) > div"
+          ],
+          "html": "<div> King Bed with Full Sleeper Sofa",
+          "size": "217x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(3) > div"
+          ],
+          "html": "<div> One Bedroom King Bed with Full Sleeper Sofa",
+          "size": "302x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(4) > div"
+          ],
+          "html": "<div> One Bedroom Two Double Beds",
+          "size": "215x21"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div:nth-of-type(5) > div"
+          ],
+          "html": "<div> One Bedroom Two Double Beds with Full Sleeper Sofa",
+          "size": "351x21"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "desktop",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "8 <img> elements have no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png",
+        "src=https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png",
+        "src=https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png",
+        "src=https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png",
+        "src=https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.png",
+        "src=https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.png",
+        "src=https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.png",
+        "src=https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.pn\">"
+        },
+        {
+          "target": [
+            "div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 142 interactive elements"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: aside, footer"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 90 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "90 tab stops before any bypass is offered",
+        "First stops: menu -> Sunday: 2028 Nov 05 - Nov 09 1 Traveler, 1 Room edit -> tune Filters"
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "3 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Distance\" — 1x1px",
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div > div:nth-of-type(1) > div > label > div > div > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Distance",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(3) > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-map",
+      "pageTitle": "Search Results - Map View",
+      "viewport": "mobile",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "24 <img> elements have no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png",
+        "src=https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png",
+        "src=https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png",
+        "src=https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png",
+        "src=https://storage.googleapis.com/eventpipe/d5b96ede-7135-4d74-8d54-eda1ce02b8ac.png",
+        "src=https://storage.googleapis.com/eventpipe/d034af31-930e-40b6-b34e-70a8c7b4fbfb.png",
+        "src=https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png",
+        "src=https://storage.googleapis.com/eventpipe/9e1eedfb-036d-42c4-9336-64ef1eaa041d.png",
+        "src=https://storage.googleapis.com/eventpipe/db423e90-54a9-4d0b-8166-9fc8160fcc71.png",
+        "src=https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/d5b96ede-7135-4d74-8d54-eda1ce02b8ac.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(4) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/d034af31-930e-40b6-b34e-70a8c7b4fbfb.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9e1eedfb-036d-42c4-9336-64ef1eaa041d.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(8) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/db423e90-54a9-4d0b-8166-9fc8160fcc71.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/29b71a7d-e040-4f58-bc60-f9a5ad6bf838.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(14) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/fc86eefd-1303-4916-bc07-73ffb5ab429f.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/a543d3a4-efbe-44a2-a9f0-b0d1120f5b8e.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(15) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/4773d989-3c04-4904-8e1e-d865018e689a.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/5b56a973-cbf3-40d9-92ca-35af6b2d8aa3.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(29) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(3)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/76d21879-de68-47fe-85a2-3a0af11a8803.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(32) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(1)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.pn\">"
+        },
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(32) > div > div > a > div > div > div > div:nth-of-type(1) > div:nth-of-type(3) > img:nth-of-type(2)"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/3e630ba7-faf7-4f22-922a-9cbdbd5cda91.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 72 interactive elements"
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: footer"
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 20 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "20 tab stops before any bypass is offered",
+        "First stops: Contact us -> Manage Booking -> Manage Booking"
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "focus-not-visible",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.4.7"
+      ],
+      "title": "3 focusable elements produce no visible change when focused",
+      "detail": "Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.",
+      "evidence": [
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(4)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "3 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "input \"Sunday: 2028\" — 1x1px",
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div:nth-of-type(2) > div:nth-of-type(1) > div > div > div:nth-of-type(1) > label > div > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input> Sunday: 2028",
+          "size": "1x1"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(4) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "desktop",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "5 <img> elements have no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png",
+        "src=https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png",
+        "src=https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png",
+        "src=https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png",
+        "src=https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(1) > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn\">"
+        },
+        {
+          "target": [
+            "div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(1) > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.pn\">"
+        },
+        {
+          "target": [
+            "div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.pn\">"
+        },
+        {
+          "target": [
+            "div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.pn\">"
+        },
+        {
+          "target": [
+            "div > div > div > div > div > div > div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(4) > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "mobile",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 60 interactive elements"
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: aside, footer"
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "2 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "a \"Privacy Policy\" — 81x17px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(2) > footer > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "81x17"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "mobile",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "2 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "details",
+      "page": "hotel-detail",
+      "pageTitle": "Hotel Detail",
+      "viewport": "mobile",
+      "id": "img-no-alt-attr",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "1.1.1"
+      ],
+      "title": "1 <img> element has no alt attribute",
+      "detail": "A missing alt attribute is not the same as alt=\"\". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.",
+      "evidence": [
+        "src=https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(2) > div:nth-of-type(1) > div > div > div > div > div > div > div:nth-of-type(1) > div > div > img"
+          ],
+          "html": "<img src=\"https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.pn\">"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "no-h1",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page has no level-1 heading",
+      "detail": "There is no h1 to name the page, so its top-level topic is not exposed programmatically.",
+      "evidence": [
+        "h2: 2026 - Fall Continental Cup",
+        "h2: 2026 - Fall Continental Cup",
+        "h6: Two Queen Beds - Guest Room",
+        "h5: Warning",
+        "h5: Spark by Hilton Exton",
+        "h6: Reservation Summary"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "heading-skip",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Heading levels skip a rank",
+      "detail": "Skipped ranks imply a nesting relationship that does not exist, misrepresenting the page outline.",
+      "evidence": [
+        "h2 -> h6 at \"Two Queen Beds - Guest Room\""
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: nav, form"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 18 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "18 tab stops before any bypass is offered",
+        "First stops: Manage Booking -> 1 -> input"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "focus-not-visible",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.4.7"
+      ],
+      "title": "4 focusable elements produce no visible change when focused",
+      "detail": "Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.",
+      "evidence": [
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)",
+        "<div> \"Close chat\" 20x20 — outline: auto 1px rgb(0, 95, 204)"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3)>div:nth-of-type(2)>div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "missing-autocomplete",
+      "impact": "moderate",
+      "level": "AA",
+      "sc": [
+        "1.3.5"
+      ],
+      "title": "4 inputs collecting personal data lack an autocomplete token",
+      "detail": "WCAG 1.3.5 requires that inputs collecting information about the user expose their purpose programmatically. Without it, browser autofill and assistive tech that substitutes familiar icons or vocabulary cannot identify the field — a direct barrier for users with cognitive disabilities.",
+      "evidence": [
+        "Rooms[0].Guests[0].FirstName -> needs autocomplete=\"given-name\"",
+        "Rooms[0].Guests[0].LastName -> needs autocomplete=\"family-name\"",
+        "Rooms[0].Guests[0].PhoneNumber -> needs autocomplete=\"tel\"",
+        "Rooms[0].HotelRewardsNumber -> needs autocomplete=\"tel\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].FirstName\">",
+          "token": "given-name"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].LastName\">",
+          "token": "family-name"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].PhoneNumber\">",
+          "token": "tel"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].HotelRewardsNumber\">",
+          "token": "tel"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "3 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "a \"Team Travel Source (TTS) Privacy Policy\" — 203x15px",
+        "a \"Privacy Policy\" — 83x21px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(7) > span > a"
+          ],
+          "html": "<a> Team Travel Source (TTS) Privacy Policy",
+          "size": "203x15"
+        },
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "83x21"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "no-lang",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "3.1.1"
+      ],
+      "title": "Document has no lang attribute",
+      "detail": "Without a language, a screen reader may announce the page using the wrong pronunciation rules.",
+      "evidence": [
+        "<html> has no lang attribute"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "9 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<input type=\"text\"> placeholder=\"First Name\"",
+        "<input type=\"text\"> placeholder=\"Last Name\"",
+        "<input type=\"text\"> placeholder=\"(000) 000-0000\"",
+        "<select> placeholder=\"\"",
+        "<input type=\"text\"> placeholder=\"Group, club, team, gym name (or N/A if not applicable)\"",
+        "<input type=\"text\"> placeholder=\"i.e. All-Stars 12U Team\"",
+        "<input type=\"text\"> placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\"",
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].FirstName\" placeholder=\"First Name\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].LastName\" placeholder=\"Last Name\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].PhoneNumber\" placeholder=\"(000) 000-0000\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > select"
+          ],
+          "html": "<select name=\"Rooms[0].Guests[0].GuestType\" placeholder=\"\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(1) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].OrganizationName\" placeholder=\"Group, club, team, gym name (or N/A if not applicable)\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].TeamName\" placeholder=\"i.e. All-Stars 12U Team\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].HotelRewardsNumber\" placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "no-h1",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page has no level-1 heading",
+      "detail": "There is no h1 to name the page, so its top-level topic is not exposed programmatically.",
+      "evidence": [
+        "h2: 2026 - Fall Continental Cup",
+        "h2: 2026 - Fall Continental Cup",
+        "h6: Two Queen Beds - Guest Room",
+        "h5: Warning",
+        "h5: Spark by Hilton Exton",
+        "h6: Reservation Summary"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "heading-skip",
+      "impact": "moderate",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Heading levels skip a rank",
+      "detail": "Skipped ranks imply a nesting relationship that does not exist, misrepresenting the page outline.",
+      "evidence": [
+        "h2 -> h6 at \"Two Queen Beds - Guest Room\""
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: nav, form"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "no-skip-link",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "2.4.1"
+      ],
+      "title": "No skip link, and no landmarks to bypass with",
+      "detail": "A keyboard user must tab through 19 stops in source order to reach anything late on the page. With no skip link and no <main> landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.",
+      "evidence": [
+        "19 tab stops before any bypass is offered",
+        "First stops: Toggle navigation -> 1 -> input"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "missing-autocomplete",
+      "impact": "moderate",
+      "level": "AA",
+      "sc": [
+        "1.3.5"
+      ],
+      "title": "4 inputs collecting personal data lack an autocomplete token",
+      "detail": "WCAG 1.3.5 requires that inputs collecting information about the user expose their purpose programmatically. Without it, browser autofill and assistive tech that substitutes familiar icons or vocabulary cannot identify the field — a direct barrier for users with cognitive disabilities.",
+      "evidence": [
+        "Rooms[0].Guests[0].FirstName -> needs autocomplete=\"given-name\"",
+        "Rooms[0].Guests[0].LastName -> needs autocomplete=\"family-name\"",
+        "Rooms[0].Guests[0].PhoneNumber -> needs autocomplete=\"tel\"",
+        "Rooms[0].HotelRewardsNumber -> needs autocomplete=\"tel\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].FirstName\">",
+          "token": "given-name"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].LastName\">",
+          "token": "family-name"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].PhoneNumber\">",
+          "token": "tel"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].HotelRewardsNumber\">",
+          "token": "tel"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "3 interactive targets are under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "a \"Team Travel Source (TTS) Privacy Policy\" — 203x15px",
+        "a \"Privacy Policy\" — 83x21px",
+        "div \"Close chat\" — 20x20px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(7) > span > a"
+          ],
+          "html": "<a> Team Travel Source (TTS) Privacy Policy",
+          "size": "203x15"
+        },
+        {
+          "target": [
+            "div:nth-of-type(2) > div > div > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "83x21"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(3)"
+          ],
+          "html": "<div> Close chat",
+          "size": "20x20"
+        }
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "no-lang",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "3.1.1"
+      ],
+      "title": "Document has no lang attribute",
+      "detail": "Without a language, a screen reader may announce the page using the wrong pronunciation rules.",
+      "evidence": [
+        "<html> has no lang attribute"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "mobile",
+      "id": "unlabelled-controls",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "4.1.2",
+        "3.3.2"
+      ],
+      "title": "9 form controls have no programmatic label",
+      "detail": "These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.",
+      "evidence": [
+        "<input type=\"text\"> placeholder=\"First Name\"",
+        "<input type=\"text\"> placeholder=\"Last Name\"",
+        "<input type=\"text\"> placeholder=\"(000) 000-0000\"",
+        "<select> placeholder=\"\"",
+        "<input type=\"text\"> placeholder=\"Group, club, team, gym name (or N/A if not applicable)\"",
+        "<input type=\"text\"> placeholder=\"i.e. All-Stars 12U Team\"",
+        "<input type=\"text\"> placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\"",
+        "<textarea> placeholder=\"Write your message here\"",
+        "<input type=\"file\"> placeholder=\"\""
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].FirstName\" placeholder=\"First Name\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].LastName\" placeholder=\"Last Name\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > input"
+          ],
+          "html": "<input name=\"Rooms[0].Guests[0].PhoneNumber\" placeholder=\"(000) 000-0000\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(4) > select"
+          ],
+          "html": "<select name=\"Rooms[0].Guests[0].GuestType\" placeholder=\"\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(1) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].OrganizationName\" placeholder=\"Group, club, team, gym name (or N/A if not applicable)\">"
+        },
+        {
+          "target": [
+            "div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"Rooms[0].TeamName\" placeholder=\"i.e. All-Stars 12U Team\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > form > div:nth-of-type(6) > div > input"
+          ],
+          "html": "<input name=\"Rooms[0].HotelRewardsNumber\" placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > div > textarea"
+          ],
+          "html": "<textarea name=\"\" placeholder=\"Write your message here\">"
+        },
+        {
+          "target": [
+            "div:nth-of-type(3) > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3) > span:nth-of-type(1) > input"
+          ],
+          "html": "<input name=\"file\" placeholder=\"\">"
+        }
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "desktop",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 7 interactive elements"
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "desktop",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: form, footer"
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "desktop",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "1 interactive target is under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "a \"Privacy Policy\" — 83x17px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > footer > div > div:nth-of-type(2) > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "83x17"
+        }
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "mobile",
+      "id": "no-headings",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Page contains no headings at all",
+      "detail": "Not one h1-h6 or role=\"heading\" element exists on this page. Screen-reader users navigate primarily by heading (the \"H\" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.",
+      "evidence": [
+        "0 heading elements found among 7 interactive elements"
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "mobile",
+      "id": "missing-landmarks",
+      "impact": "serious",
+      "level": "A",
+      "sc": [
+        "1.3.1"
+      ],
+      "title": "Missing landmark regions: main, navigation, banner",
+      "detail": "Landmarks are how assistive-technology users move between regions of a page. Without a <main> landmark there is no way to jump past the header and filters straight to the results.",
+      "evidence": [
+        "Landmarks present: form, footer"
+      ]
+    },
+    {
+      "journey": "managebooking",
+      "page": "manage-booking-lookup",
+      "pageTitle": "Manage Booking - Lookup",
+      "viewport": "mobile",
+      "id": "small-targets",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.5.8"
+      ],
+      "title": "1 interactive target is under the 24x24 CSS-pixel minimum",
+      "detail": "WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.",
+      "evidence": [
+        "a \"Privacy Policy\" — 83x17px"
+      ],
+      "nodes": [
+        {
+          "target": [
+            "div:nth-of-type(1) > div > div > footer > div > div:nth-of-type(2) > a"
+          ],
+          "html": "<a> Privacy Policy",
+          "size": "83x17"
+        }
+      ]
+    },
+    {
+      "journey": "browse",
+      "page": "search-results",
+      "pageTitle": "Site-wide",
+      "viewport": "desktop",
+      "id": "focus-appearance",
+      "impact": "serious",
+      "level": "AA",
+      "sc": [
+        "2.4.11"
+      ],
+      "title": "The only focus indicator is a 1px dashed underline, which is below the minimum focus appearance",
+      "detail": "WCAG 2.2's Focus Appearance (2.4.11, AA) requires the focus indicator to cover at least the area of a 2px-thick perimeter of the control and to have at least 3:1 contrast against the unfocused state. A 1px dashed text underline meets neither, and it does nothing at all for controls with no text — icon buttons, the carousel arrows, the map controls. Compounding it, Quasar's own focus affordance is explicitly disabled (`.q-focus-helper { display: none }`) and `outline: 0` is set on every focusable Quasar element.",
+      "evidence": [
+        "Sole focus rule in the production stylesheet: :focus-visible{ text-decoration: underline 1px dashed; }",
+        ".q-focus-helper { display: none } — Quasar focus ring suppressed",
+        ".q-focusable, .q-hoverable { outline: 0 } — native outline removed"
+      ]
+    },
+    {
+      "journey": "checkout",
+      "page": "checkout-1-guests",
+      "pageTitle": "1. Guest Information",
+      "viewport": "desktop",
+      "id": "timing-adjustable",
+      "impact": "critical",
+      "level": "A",
+      "sc": [
+        "2.2.1"
+      ],
+      "title": "Checkout imposes a ~15-minute time limit with no way to turn it off, adjust it, or extend it",
+      "detail": "WCAG 2.2.1 (Level A) allows a time limit only if the user can turn it off, adjust it to at least ten times the default, or extend it with a simple action after a warning. This checkout offers none of the three. The limit spans a four-step form that asks for guest names, an organisation, a team, payment details and policy acknowledgements — a user relying on a screen reader, a switch device, voice control, or simply reading carefully can very plausibly exceed it and lose the reservation. This is the single highest-severity finding in the audit: it can make the booking flow impossible to complete rather than merely difficult.",
+      "evidence": [
+        "Countdown found in production markup, starting at 14:52",
+        "No extend, pause, or disable control present in the DOM"
+      ],
+      "nodes": [
+        {
+          "target": [
+            ".time-remaining"
+          ],
+          "html": "Time remaining: 14:54"
+        }
+      ]
+    }
+  ]
+}

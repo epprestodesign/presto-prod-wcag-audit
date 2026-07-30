@@ -1,0 +1,22 @@
+{
+  "id": "checkout-4-policies",
+  "journey": "checkout",
+  "title": "4. Reservation Policies",
+  "order": 40,
+  "auth": "none",
+  "description": "Step 4. Cancellation policy acknowledgement and final review before booking.",
+  "url": null,
+  "note": "Requires completing steps 1-3. Supply a URL or leave for flow capture.",
+  "settleMs": 3000,
+  "capturedAt": "2026-07-30T16:38:14.537Z",
+  "viewports": {
+    "desktop": {
+      "status": "pending",
+      "reason": "Requires completing steps 1-3. Supply a URL or leave for flow capture."
+    },
+    "mobile": {
+      "status": "pending",
+      "reason": "Requires completing steps 1-3. Supply a URL or leave for flow capture."
+    }
+  }
+}

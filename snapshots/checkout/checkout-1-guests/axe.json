@@ -1,0 +1,720 @@
+{
+  "desktop": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".btn-outline.btn-outline-primary[target=\"_blank\"]"
+              ]
+            ],
+            "html": "<a class=\"btn btn-outline btn-outline-primary font-14\" href=\"https://app.eventpipe.com/search/\" target=\"_blank\">Manage Booking</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #007bff, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.97,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".text-yellow"
+              ]
+            ],
+            "html": "<p class=\"font-14 text-yellow\"><i class=\"fa fa-star\"></i> 3.5 Stars</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.04 (foreground color: #ffa000, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#ffa000",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.04,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".mb-md-0.col-md-6.col-12 > .btn-outline-secondary.btn.w-100"
+              ]
+            ],
+            "html": "<a href=\"https://app.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/order/REDACTED-ORDER-ID/restart/\" class=\"btn btn-outline-secondary w-100\">Start Over</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "11.3pt (15px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col-md-6.col-12:nth-child(2) > .btn-outline-secondary.btn.w-100"
+              ]
+            ],
+            "html": "<a href=\"https://app.eventpip...\" class=\"btn btn-outline-seco...\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "11.3pt (15px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 4,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "help": "Select element must have an accessible name",
+        "description": "Ensure select element has an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/select-name?application=axeAPI",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.GuestType"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].Guests[0].GuestType\" id=\"Rooms[0].Guests[0].GuestType\" class=\"customized-select text-muted\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 1,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".d-lg-block"
+              ]
+            ],
+            "html": "<h2 class=\"d-none d-lg-block\">2026 - Fall Continental Cup</h2>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "24.0pt (32px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "3:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".flex-column:nth-child(2) > .d-lg-flex"
+              ]
+            ],
+            "html": "<p class=\"d-none d-lg-flex\">Sat, 11/07/2026 - Sun, 11/08/2026</p>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.6pt (12.8px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.NumberOfOccupants"
+              ]
+            ],
+            "html": "<input class=\"form-control-with-spinner\" id=\"Rooms[0].NumberOfOccupants\" max=\"4\" min=\"1\" name=\"Rooms[0].NumberOfOccupants\" type=\"number\" value=\"1\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.FirstName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].Guests[0].FirstName\" name=\"Rooms[0].Guests[0].FirstName\" placeholder=\"First Name\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.LastName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].Guests[0].LastName\" name=\"Rooms[0].Guests[0].LastName\" placeholder=\"Last Name\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.PhoneNumber"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12 phone-mask\" id=\"Rooms[0].Guests[0].PhoneNumber\" name=\"Rooms[0].Guests[0].PhoneNumber\" placeholder=\"(000) 000-0000\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.GuestType"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].Guests[0].GuestType\" id=\"Rooms[0].Guests[0].GuestType\" class=\"customized-select text-muted\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.OrganizationName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].OrganizationName\" name=\"Rooms[0].OrganizationName\" placeholder=\"Group, club, team, gym name (or N/A if not applicable)\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "input[name=\"Rooms[0].TeamName\"]"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" name=\"Rooms[0].TeamName\" placeholder=\"i.e. All-Stars 12U Team\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.CustomFieldValues\\[0\\]\\.FieldValue"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].CustomFieldValues[0].FieldValue\" id=\"Rooms[0].CustomFieldValues[0].FieldValue\" class=\"customized-select text-muted\" data-custom-field-value-target=\"selectControl\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.SpecialRequestsForHotel"
+              ]
+            ],
+            "html": "<textarea class=\"form-control font-12\" id=\"Rooms[0].SpecialRequ...\" name=\"Rooms[0].SpecialRequ...\" placeholder=\"Special Requests for...\" rows=\"3\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "input[name=\"Rooms[0].HotelRewardsNumber\"]"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" name=\"Rooms[0].HotelRewardsNumber\" placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 12,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".text-yellow"
+              ]
+            ],
+            "html": "<p class=\"font-14 text-yellow\"><i class=\"fa fa-star\"></i> 3.5 Stars</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.04 (foreground color: #ffa000, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#ffa000",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.04,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".mb-md-0.col-md-6.col-12 > .btn-outline-secondary.btn.w-100"
+              ]
+            ],
+            "html": "<a href=\"https://app.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/order/REDACTED-ORDER-ID/restart/\" class=\"btn btn-outline-secondary w-100\">Start Over</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "11.3pt (15px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col-md-6.col-12:nth-child(2) > .btn-outline-secondary.btn.w-100"
+              ]
+            ],
+            "html": "<a href=\"https://app.eventpip...\" class=\"btn btn-outline-seco...\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 11.3pt (15px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "11.3pt (15px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 3,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "select-name",
+        "impact": "critical",
+        "help": "Select element must have an accessible name",
+        "description": "Ensure select element has an accessible name",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/select-name?application=axeAPI",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.GuestType"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].Guests[0].GuestType\" id=\"Rooms[0].Guests[0].GuestType\" class=\"customized-select text-muted\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 1,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".d-block"
+              ]
+            ],
+            "html": "<h2 class=\"d-block d-lg-none font-20\">2026 - Fall Continental Cup</h2>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "15.0pt (20px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.NumberOfOccupants"
+              ]
+            ],
+            "html": "<input class=\"form-control-with-spinner\" id=\"Rooms[0].NumberOfOccupants\" max=\"4\" min=\"1\" name=\"Rooms[0].NumberOfOccupants\" type=\"number\" value=\"1\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.FirstName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].Guests[0].FirstName\" name=\"Rooms[0].Guests[0].FirstName\" placeholder=\"First Name\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.LastName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].Guests[0].LastName\" name=\"Rooms[0].Guests[0].LastName\" placeholder=\"Last Name\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.PhoneNumber"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12 phone-mask\" id=\"Rooms[0].Guests[0].PhoneNumber\" name=\"Rooms[0].Guests[0].PhoneNumber\" placeholder=\"(000) 000-0000\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.Guests\\[0\\]\\.GuestType"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].Guests[0].GuestType\" id=\"Rooms[0].Guests[0].GuestType\" class=\"customized-select text-muted\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.OrganizationName"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" id=\"Rooms[0].OrganizationName\" name=\"Rooms[0].OrganizationName\" placeholder=\"Group, club, team, gym name (or N/A if not applicable)\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "input[name=\"Rooms[0].TeamName\"]"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" name=\"Rooms[0].TeamName\" placeholder=\"i.e. All-Stars 12U Team\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.CustomFieldValues\\[0\\]\\.FieldValue"
+              ]
+            ],
+            "html": "<select name=\"Rooms[0].CustomFieldValues[0].FieldValue\" id=\"Rooms[0].CustomFieldValues[0].FieldValue\" class=\"customized-select text-muted\" data-custom-field-value-target=\"selectControl\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background image",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgImage",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#Rooms\\[0\\]\\.SpecialRequestsForHotel"
+              ]
+            ],
+            "html": "<textarea class=\"form-control font-12\" id=\"Rooms[0].SpecialRequ...\" name=\"Rooms[0].SpecialRequ...\" placeholder=\"Special Requests for...\" rows=\"3\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "input[name=\"Rooms[0].HotelRewardsNumber\"]"
+              ]
+            ],
+            "html": "<input class=\"form-control font-12\" name=\"Rooms[0].HotelRewardsNumber\" placeholder=\"Earn points - enter your hotel brand rewards account number (if applicable)\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": "bgGradient",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 11,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  }
+}

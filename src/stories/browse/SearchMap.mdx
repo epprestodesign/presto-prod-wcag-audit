@@ -1,0 +1,1009 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Journeys/Browse & Search/Search Results - Map View — Findings" />
+
+# Search Results - Map View — Findings
+
+Full map view with clustered hotel markers and info windows.
+
+**Captured from:** `https://presto.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/shopKey/6a6b786d5171a074d8784f55/search`
+
+---
+
+## Summary
+
+| Impact | Count |
+| --- | --- |
+| Critical | 5 |
+| Serious | 7 |
+| Moderate | 0 |
+| Minor | 0 |
+
+12 distinct issues on this page.
+
+---
+### 1. Buttons must have discernible text
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 4.1.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `button-name` |
+| **Detected by** | axe-core |
+| **Occurrences** | 81 |
+| **Viewports** | desktop, mobile |
+| **Reference** | [button-name](https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (40 of 81)</summary>
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(2) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(2) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(3) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(3) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(4) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(4) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(5) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(5) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(6) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-left.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(6) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .absolute-right.q-carousel__control.custom-arrow &gt; .q-btn--dense.translucent-black.q-btn--round -->
+&lt;button data-v-f0f0329e="" class="q-btn q-btn-item non-selectable no-outline q-btn--standard q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--dense translucent-black" tabindex="0" type="button"&gt;
+```
+
+</details>
+
+#### Fix — Name icon-only buttons
+
+These buttons contain only an icon glyph, so their accessible name resolves to the ligature text ("arrow_drop_down", "search") or to nothing. A screen reader announces "button" with no indication of what it does. This is the single largest critical-impact count in the audit, driven by the carousel arrows repeated on every hotel card.
+
+**Before** (production)
+
+```html
+<!-- Material icon ligature becomes the accessible name -->
+<button class="q-btn">
+  <i class="material-icons">arrow_left</i>
+</button>
+```
+
+**After**
+
+```html
+<!-- aria-label names the control; aria-hidden stops the ligature
+     text from being announced alongside it. -->
+<button class="q-btn" aria-label="Previous photo">
+  <i class="material-icons" aria-hidden="true">arrow_left</i>
+</button>
+```
+
+**Vue / Quasar form**
+
+```html
+<!-- Quasar: q-btn with :icon still needs a name. -->
+<q-btn icon="arrow_left" aria-label="Previous photo" flat round />
+
+<!-- Better for carousels: name the target, not the direction, so a user
+     hearing 40 identical "Previous photo" buttons can tell them apart. -->
+<q-btn
+  icon="arrow_left"
+  :aria-label="`Previous photo of ${hotel.name}`"
+  flat round
+/>
+```
+
+**Notes**
+
+- The carousel arrows repeat once per hotel card — 80 nodes on the desktop search page alone. Fixing the shared card component clears most of the count in one change.
+- If the control is genuinely decorative and duplicated by adjacent text, hide it instead: `aria-hidden="true" tabindex="-1"`.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** presto.eventpipe.com (Vue/Quasar)
+
+---
+
+### 2. Images must have alternative text
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 1.1.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `image-alt` |
+| **Detected by** | axe-core |
+| **Occurrences** | 24 |
+| **Viewports** | desktop, mobile |
+| **Reference** | [image-alt](https://dequeuniversity.com/rules/axe/4.12/image-alt?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (8 of 24)</summary>
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(4) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(8) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(13) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(14) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(27) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(30) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.png"&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(39) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; div[data-v-f0f0329e=""][data-v-30c23d7d=""] &gt; .q-carousel.q-panel-parent.q-carousel--without-padding &gt; .q-carousel__slides-container &gt; .q-panel.scroll[role="tabpanel"] &gt; .q-carousel__slide.hotel-card-img[data-v-f0f0329e=""] &gt; .hotel-card-img -->
+&lt;img data-v-f0f0329e="" class="hotel-card-img" src="https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.png"&gt;
+```
+
+</details>
+
+#### Fix — Give every image an alt attribute — empty for decorative ones
+
+A missing alt attribute is not equivalent to alt="". With no attribute, screen readers fall back to announcing the filename — which here is a GUID like "55d2ba04-bf6b-4bc1-81bc-736fd46eeb0d.png". Decorative images need an explicit empty alt so they are skipped.
+
+**Before** (production)
+
+```html
+<img src="https://storage.googleapis.com/eventpipe/55d2ba04-….png">
+```
+
+**After**
+
+```html
+<!-- Meaningful: describe the content's purpose, not its appearance. -->
+<img src="https://storage.googleapis.com/eventpipe/55d2ba04-….png"
+     alt="Spark by Hilton Exton exterior">
+
+<!-- Decorative / redundant with adjacent text: empty alt, explicitly. -->
+<img src="…/sponsor-band.png" alt="">
+
+<!-- Vue: bind it, and keep a fallback so a missing field never means no attr. -->
+<img :src="hotel.photoUrl" :alt="hotel.photoAlt || `${hotel.name} exterior`">
+```
+
+
+**Notes**
+
+- Hotel photos are content: they inform the choice, so they need descriptive alt.
+- The event hero is a background-image, so it needs no alt — but the white title text over it must still meet 1.4.3 contrast against the photo.
+- Sponsor/promo images that link somewhere must describe the destination, not the artwork.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 3. 8 &lt;img&gt; elements have no alt attribute
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 1.1.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `img-no-alt-attr` |
+| **Detected by** | manual |
+| **Occurrences** | 20 |
+| **Viewports** | desktop, mobile |
+
+
+A missing alt attribute is not the same as alt="". With no attribute at all, screen readers fall back to announcing the filename or URL, which here is a GUID.
+
+**Evidence**
+
+- `src=https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png`
+- `src=https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.png`
+- `src=https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.png`
+- `src=https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.png`
+- `src=https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.png`
+- `src=https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.png`
+- `src=https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.png`
+- `src=https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.png`
+
+<details>
+<summary>Affected elements (8 of 20)</summary>
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/2096d07e-bc34-47a6-b5ba-03f1405e4324.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/41cb8409-035d-4a60-b112-e50af06064d3.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/9a576c75-f3c1-47b7-8506-cb673b800aa1.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/8bcb07d8-1352-4848-b91e-ecaed298eff8.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/9b491b20-e02a-452e-ab9d-dd6c57e62d1e.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/bf3b2834-006b-4cf8-aa18-c90408ea4daf.pn"&gt;
+```
+
+```html
+<!-- div &gt; a &gt; div &gt; div &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(1) &gt; div &gt; div &gt; img -->
+&lt;img src="https://storage.googleapis.com/eventpipe/906b0693-392a-4390-a7c6-cd5f97185fb5.pn"&gt;
+```
+
+</details>
+
+#### Fix — Add the missing alt attribute
+
+Same defect as image-alt, reported from the DOM inventory: the attribute is absent entirely, so AT falls back to the GUID filename.
+
+**Before** (production)
+
+```html
+<img src="…/55d2ba04-bf6b-4bc1-81bc-736fd46eeb0d.png">
+```
+
+**After**
+
+```html
+<img src="…/55d2ba04-bf6b-4bc1-81bc-736fd46eeb0d.png" alt="">   <!-- decorative -->
+<img src="…/hotel-exterior.png" alt="Spark by Hilton Exton exterior">  <!-- meaningful -->
+```
+
+
+**Notes**
+
+- Decide per image: does it carry information the surrounding text does not?
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 4. 2 form controls have no programmatic label
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 4.1.2, 3.3.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `unlabelled-controls` |
+| **Detected by** | manual |
+| **Occurrences** | 2 |
+| **Viewports** | desktop, mobile |
+
+
+These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.
+
+**Evidence**
+
+- `&lt;textarea&gt; placeholder="Write your message here"`
+- `&lt;input type="file"&gt; placeholder=""`
+
+<details>
+<summary>Affected elements (2)</summary>
+
+```html
+<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; div &gt; textarea -->
+&lt;textarea name="" placeholder="Write your message here"&gt;
+```
+
+```html
+<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; span:nth-of-type(1) &gt; input -->
+&lt;input name="file" placeholder=""&gt;
+```
+
+</details>
+
+#### Fix — Give every form control a real, programmatic label
+
+These controls are identified only by placeholder text or by nearby visual text. A placeholder is not an accessible name: it is not reliably announced, it fails contrast at its default grey, and it disappears the moment the user types — removing the only cue to what the field was for. Users who navigate a form field-by-field with a screen reader hear "edit, blank".
+
+**Before** (production)
+
+```html
+<!-- checkout step 1: label is a sibling div, not associated -->
+<div class="field-label">Team Name <span class="req">*</span></div>
+<input type="text" name="Rooms[0].TeamName" placeholder="i.e. All-Stars 12U Team">
+```
+
+**After**
+
+```html
+<!-- Associate explicitly. The for/id pair is what makes the text a *name*. -->
+<label for="team-name">
+  Team Name
+  <!-- asterisk hidden from AT; the required attribute already conveys it -->
+  <span class="req" aria-hidden="true">*</span>
+</label>
+<input type="text"
+       id="team-name"
+       name="Rooms[0].TeamName"
+       required
+       aria-required="true"
+       placeholder="i.e. All-Stars 12U Team">
+```
+
+**Vue / Quasar form**
+
+```html
+<!-- Vue/Quasar side: q-input renders the association for you.
+     Never replace :label with a bare placeholder. -->
+<q-input
+  v-model="teamName"
+  label="Team Name"
+  :rules="[val => !!val || 'Team name is required']"
+  hint="i.e. All-Stars 12U Team"
+/>
+
+<!-- If a design truly forbids a visible label, name it explicitly — but a
+     visible label is preferred: it also serves users with cognitive load. -->
+<q-input v-model="query" aria-label="Search by property name" />
+```
+
+**Notes**
+
+- Production ids here are order-scoped (`Rooms[0].Guests[0].FirstName`). Reuse that exact string as the id so for/id stays unique when a second guest row is added.
+- Do not point `for` at a wrapper div — it must reference the control itself.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 5. Required ARIA attributes must be provided
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 4.1.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `aria-required-attr` |
+| **Detected by** | axe-core |
+| **Occurrences** | 1 |
+| **Viewports** | desktop |
+| **Reference** | [aria-required-attr](https://dequeuniversity.com/rules/axe/4.12/aria-required-attr?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (1)</summary>
+
+```html
+<!-- div[data-snapshot="1"],.q-slider -->
+&lt;div data-v-93a03dc3="" class="q-slider q-slider--h q-slider--inactive inline no-wrap column q-slider--enabled q-slider--editable q-slider--label q-slider--dense q-slider--dense--h q-slider--no-value" role="slider" aria-valuemin="1" aria-valuemax="30" aria-orientation="horizontal" data-step="1"&gt;
+```
+
+</details>
+
+#### Fix — Convey "required" to assistive tech, not just with a red asterisk
+
+Required fields are marked with a red "*" only. Colour alone is not an acceptable carrier of information (1.4.1), and the asterisk is not exposed as a required state, so a screen reader user learns a field was mandatory only after submitting and failing validation.
+
+**Before** (production)
+
+```html
+<div class="field-label">Mobile Number <span class="req">*</span></div>
+<input type="text" name="Rooms[0].Guests[0].PhoneNumber">
+```
+
+**After**
+
+```html
+<label for="mobile">
+  Mobile Number
+  <span class="req" aria-hidden="true">*</span>
+  <span class="sr-only">(required)</span>
+</label>
+<input type="tel"
+       id="mobile"
+       name="Rooms[0].Guests[0].PhoneNumber"
+       required
+       aria-required="true"
+       autocomplete="tel">
+```
+
+
+**Notes**
+
+- The legend "All fields marked with * are required" is fine as a supplement, but it does not make the state programmatic.
+- Native `required` also enables browser validation; `aria-required` covers AT that does not map the native attribute.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---
+
+### 6. Elements must meet minimum color contrast ratio thresholds
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 1.4.3 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `color-contrast` |
+| **Detected by** | axe-core |
+| **Occurrences** | 171 |
+| **Viewports** | desktop, mobile |
+| **Reference** | [color-contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (4 of 171)</summary>
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .image-wrapper.col-auto[data-v-30c23d7d=""] &gt; .hotel-label.preferred[data-v-30c23d7d=""] -->
+&lt;div data-v-30c23d7d="" class="hotel-label preferred"&gt;Preferred Hotel&lt;/div&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .q-pa-md.column.col &gt; .text-green.items-center.row &gt; div[data-v-30c23d7d=""] -->
+&lt;div data-v-30c23d7d=""&gt;&lt;i data-v-30c23d7d="" class="q-icon notranslate material-icons q-pr-sm" aria-hidden="true" style="font-size: 18px;"&gt;check_circle&lt;/i&gt;&lt;!----&gt; Fully Available &lt;!----&gt;&lt;/div&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .q-pa-md.column.col &gt; .q-mt-auto.justify-between.row &gt; .text-right.col[data-v-30c23d7d=""] &gt; .text-primary[data-v-30c23d7d=""] &gt; div &gt; .text-grey.text-caption -->
+&lt;div class="text-caption text-grey"&gt;Total includes taxes &amp; fees&lt;/div&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],div[data-v-2826186a=""]:nth-child(1) &gt; div[data-v-2826186a=""] &gt; .q-px-md.q-pb-md[data-v-2826186a=""] &gt; .undecorated-link &gt; .q-card.my-card[data-v-30c23d7d=""] &gt; .card-container.cursor-pointer[data-v-30c23d7d=""] &gt; .row[data-v-30c23d7d=""] &gt; .q-pa-md.column.col &gt; .q-mt-auto.justify-between.row &gt; .text-right.col[data-v-30c23d7d=""] &gt; div[data-v-30c23d7d=""]:nth-child(2) &gt; .q-chip.q-chip--colored.low-rate &gt; .q-chip__content.no-wrap.q-anchor--skip -->
+&lt;div class="q-chip__content col row no-wrap items-center q-anchor--skip"&gt;Low Rate Guarantee&lt;/div&gt;
+```
+
+</details>
+
+#### Fix — Raise text contrast to 4.5:1 (3:1 for large text)
+
+The largest single count in the audit. Failing text is mostly grey-on-white secondary copy, placeholder text, and white text on light brand fills. At typical mobile brightness this is the difference between readable and invisible for users with low vision — and for everyone outdoors.
+
+**Before** (production)
+
+```html
+/* Placeholder and secondary text below 4.5:1 on white */
+.text-grey-6      { color: #9e9e9e; }   /* 2.85:1 on #fff — fails */
+input::placeholder{ color: #a8a8a8; }   /* 2.54:1 on #fff — fails */
+```
+
+**After**
+
+```html
+/* Darkened to clear 4.5:1 on white. Values chosen to stay within the
+   existing grey ramp so the visual design is preserved. */
+.text-grey-6      { color: #6b6b6b; }   /* 4.62:1 — passes AA  */
+input::placeholder{ color: #666666; }   /* 5.05:1 — passes AA  */
+
+/* Large text (>=24px, or >=18.66px bold) may use 3:1 */
+.hero-subtitle    { color: #767676; }   /* 4.54:1 — passes at any size */
+```
+
+
+**Notes**
+
+- Check the fix against the real background, not white — several failures sit on the #f9f9fa page fill, which needs slightly darker text than pure white does.
+- The white-on-photo hero title cannot be fixed with a colour change alone: add a scrim (e.g. `background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45))`) so contrast is guaranteed regardless of which event image is uploaded.
+- Disabled controls are exempt from 1.4.3, so filter those out before triaging the raw count.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 7. 35 interactive targets are under the 24x24 CSS-pixel minimum
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.5.8 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `small-targets` |
+| **Detected by** | manual |
+| **Occurrences** | 25 |
+| **Viewports** | desktop, mobile |
+
+
+WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.
+
+**Evidence**
+
+- `input "Sunday: 2028" — 1x1px`
+- `div "100% Smoke-Free Hotel" — 172x21px`
+- `div "Breakfast (fee $)" — 124x21px`
+- `div "EV Charging" — 100x21px`
+- `div "Exterior Corridors" — 132x21px`
+- `div "Free Airport Shuttle" — 145x21px`
+- `div "Free Breakfast" — 113x21px`
+- `div "Free Buffet Breakfast" — 153x21px`
+- `div "Free Continental Breakfast" — 186x21px`
+- `div "Free Grab & Go Breakfast" — 179x21px`
+- `div "Free Parking" — 101x21px`
+- `div "Handicap Accessible" — 148x21px`
+
+<details>
+<summary>Affected elements (25)</summary>
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div &gt; div &gt; div:nth-of-type(1) &gt; label &gt; div &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
+&lt;input&gt; Sunday: 2028
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div -->
+&lt;div&gt; 100% Smoke-Free Hotel
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div -->
+&lt;div&gt; Breakfast (fee $)
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div -->
+&lt;div&gt; EV Charging
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(4) &gt; div -->
+&lt;div&gt; Exterior Corridors
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(5) &gt; div -->
+&lt;div&gt; Free Airport Shuttle
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(6) &gt; div -->
+&lt;div&gt; Free Breakfast
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(7) &gt; div -->
+&lt;div&gt; Free Buffet Breakfast
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(8) &gt; div -->
+&lt;div&gt; Free Continental Breakfast
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(9) &gt; div -->
+&lt;div&gt; Free Grab & Go Breakfast
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(10) &gt; div -->
+&lt;div&gt; Free Parking
+```
+
+```html
+<!-- div &gt; div:nth-of-type(2) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div &gt; div &gt; div &gt; div:nth-of-type(3) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(11) &gt; div -->
+&lt;div&gt; Handicap Accessible
+```
+
+</details>
+
+#### Fix — Enlarge undersized targets
+
+Measured geometry shows these focusable elements render below 24x24 CSS pixels.
+
+**Before** (production)
+
+```html
+.star { width: 14px; height: 14px; }
+```
+
+**After**
+
+```html
+.star { width: 14px; height: 14px; padding: 5px; box-sizing: content-box; }
+```
+
+
+**Notes**
+
+- Identical remedy to target-size; this entry is sourced from measured geometry rather than axe.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 8. Page contains no headings at all
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 1.3.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `no-headings` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+Not one h1-h6 or role="heading" element exists on this page. Screen-reader users navigate primarily by heading (the "H" key / rotor); with no headings there is no way to skim the page or jump to a section, so the only option is to read linearly from the top.
+
+**Evidence**
+
+- `0 heading elements found among 360 interactive elements`
+
+
+#### Fix — Introduce a real heading outline
+
+The search, hotel detail and lookup pages contain no h1–h6 at all. Heading navigation is the primary way screen-reader users skim a page — the rotor / "H" key. With zero headings there is nothing to navigate by, so reaching the tenth hotel means listening through everything before it.
+
+**Before** (production)
+
+```html
+<!-- Hotel name is styled text in a div — visually a heading, semantically nothing -->
+<div class="hotel-name text-h6">Spark by Hilton Exton</div>
+```
+
+**After**
+
+```html
+<!-- Same visual weight, real semantics. Quasar's text-h6 class is
+     presentational and works on any element. -->
+<h3 class="hotel-name text-h6">Spark by Hilton Exton</h3>
+```
+
+**Vue / Quasar form**
+
+```html
+<!-- Recommended outline for the search page -->
+<h1 class="sr-only">Hotels for 2026 - Fall Continental Cup</h1>
+
+<h2 class="sr-only">Search and filters</h2>
+  <h3>Search by Property Name</h3>
+  <h3>Amenities</h3>
+  <h3>Search Radius</h3>
+
+<h2 class="sr-only">Results — 24 hotels</h2>
+  <h3>Spark by Hilton Exton</h3>       <!-- one per result card -->
+
+<!-- .sr-only: available to AT, invisible on screen. -->
+<style>
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+</style>
+```
+
+**Notes**
+
+- Do not choose heading level by how big the text looks — level expresses nesting. Style separately.
+- One h1 per page, naming what the page is for.
+- Result-card headings should be the hotel name: that is what users search for by rotor.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** presto.eventpipe.com (Vue/Quasar)
+
+---
+
+### 9. Missing landmark regions: main, navigation, banner
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 1.3.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `missing-landmarks` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+Landmarks are how assistive-technology users move between regions of a page. Without a &lt;main&gt; landmark there is no way to jump past the header and filters straight to the results.
+
+**Evidence**
+
+- `Landmarks present: footer, region`
+
+
+#### Fix — Wrap the page in landmark regions
+
+Only a &lt;footer&gt; exists site-wide. Landmarks let assistive-tech users jump between regions — without &lt;main&gt;, there is no way to skip the header, hero and filter rail and land on the results.
+
+**Before** (production)
+
+```html
+<div id="app">
+  <div class="header">…</div>
+  <div class="filters">…</div>
+  <div class="results">…</div>
+  <footer>…</footer>
+</div>
+```
+
+**After**
+
+```html
+<div id="app">
+  <header role="banner">
+    <nav aria-label="Primary">…</nav>
+  </header>
+
+  <!-- The single most valuable addition: a jump target for the results -->
+  <main id="main-content">
+    <!-- Two search regions on one page must be told apart by name -->
+    <search aria-label="Hotel filters">…</search>
+    <section aria-label="Search results">…</section>
+  </main>
+
+  <footer role="contentinfo">…</footer>
+</div>
+```
+
+
+**Notes**
+
+- Exactly one &lt;main&gt; per page.
+- Name repeated landmarks (`aria-label`) — two unnamed &lt;nav&gt;s are indistinguishable in a landmark list.
+- &lt;search&gt; is the HTML element for a search region; `role="search"` is the fallback for older AT.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 10. No skip link, and no landmarks to bypass with
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.4.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `no-skip-link` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+A keyboard user must tab through 226 stops in source order to reach anything late on the page. With no skip link and no &lt;main&gt; landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.
+
+**Evidence**
+
+- `226 tab stops before any bypass is offered`
+- `First stops: Contact us -&gt; Manage Booking -&gt; Manage Booking`
+
+
+#### Fix — Add a skip link
+
+A keyboard user faces 215 tab stops in source order on the desktop search page, with no way to bypass the header and filter rail. WCAG 2.4.1 is Level A and is satisfied by either a skip link or landmarks; this journey currently has neither.
+
+**Before** (production)
+
+```html
+<!-- nothing precedes the header in tab order -->
+<header>…</header>
+```
+
+**After**
+
+```html
+<!-- First focusable element on the page. Visually hidden until focused,
+     so it costs the visual design nothing. -->
+<a class="skip-link" href="#main-content">Skip to search results</a>
+
+<header>…</header>
+<main id="main-content" tabindex="-1">…</main>
+
+<style>
+.skip-link {
+  position: absolute;
+  top: -100px;         /* off-screen, but still focusable */
+  left: 8px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #14203c;
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  text-decoration: none;
+  transition: top .15s ease-in;
+}
+.skip-link:focus { top: 0; }   /* slides into view on keyboard focus */
+</style>
+```
+
+
+**Notes**
+
+- `tabindex="-1"` on the target makes the jump actually move focus in Safari and Chrome; without it the link scrolls but focus stays behind.
+- Never hide it with `display:none` or `visibility:hidden` — that removes it from the tab order and defeats the purpose.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 11. 1 focusable element produces no visible change when focused
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.4.7 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `focus-not-visible` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop |
+
+
+Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.
+
+**Evidence**
+
+- `&lt;button&gt; "Keyboard shortcuts" 87x14 — outline: auto 1px rgb(0, 95, 204)`
+
+<details>
+<summary>Affected elements (1)</summary>
+
+```html
+<!-- div:nth-of-type(4)&gt;div&gt;div:nth-of-type(2)&gt;div&gt;div:nth-of-type(2)&gt;div&gt;div&gt;div:nth-of-type(1)&gt;button -->
+&lt;button&gt; Keyboard shortcuts
+```
+
+</details>
+
+#### Fix — Make these specific controls show focus
+
+Measured by tabbing to each control and diffing rendered pixels: these produced no perceptible change when focused. Most are third-party chat-widget controls and 1x1 proxy inputs behind styled Quasar components.
+
+**Before** (production)
+
+```html
+<!-- 1x1 proxy input: a real tab stop the user cannot see -->
+<input class="q-field__native" style="width:1px;height:1px">
+```
+
+**After**
+
+```html
+/* Style the styled wrapper when the proxy inside it has focus, so the
+   thing the user actually sees reacts. */
+.q-field:focus-within .q-field__control {
+  outline: 2px solid #14203c;
+  outline-offset: 2px;
+}
+```
+
+
+**Notes**
+
+- The chat widget is third-party — either configure its theme for a visible ring or raise it with the vendor.
+- See "focus-appearance" for the global rule that causes most of this.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 12. ARIA input fields must have an accessible name
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 4.1.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `aria-input-field-name` |
+| **Detected by** | axe-core |
+| **Occurrences** | 1 |
+| **Viewports** | desktop |
+| **Reference** | [aria-input-field-name](https://dequeuniversity.com/rules/axe/4.12/aria-input-field-name?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (1)</summary>
+
+```html
+<!-- div[data-snapshot="1"],.q-slider -->
+&lt;div data-v-93a03dc3="" class="q-slider q-slider--h q-slider--inactive inline no-wrap column q-slider--enabled q-slider--editable q-slider--label q-slider--dense q-slider--dense--h q-slider--no-value" role="slider" aria-valuemin="1" aria-valuemax="30" aria-orientation="horizontal" data-step="1"&gt;
+```
+
+</details>
+
+#### Fix — Name custom ARIA widgets
+
+Elements carrying an ARIA input role (combobox, spinbutton, slider) have no accessible name. Taking on the role means taking on the naming obligation — the native label association no longer applies.
+
+**Before** (production)
+
+```html
+<div role="combobox" aria-expanded="false">
+  <span>1 Traveler, 1 Room</span>
+</div>
+```
+
+**After**
+
+```html
+<div role="combobox"
+     aria-expanded="false"
+     aria-controls="occupancy-listbox"
+     aria-label="Travellers and rooms">
+  <span>1 Traveler, 1 Room</span>
+</div>
+
+<!-- The search radius slider needs name + current value -->
+<div role="slider"
+     aria-label="Search radius in miles"
+     aria-valuemin="1" aria-valuemax="50" aria-valuenow="25"
+     aria-valuetext="25 miles"
+     tabindex="0"></div>
+```
+
+
+**Notes**
+
+- Prefer a native control over a custom role wherever the design allows — `&lt;select&gt;` and `&lt;input type=range&gt;` are named and operable for free.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** presto.eventpipe.com (Vue/Quasar)
+
+---

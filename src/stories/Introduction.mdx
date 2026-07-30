@@ -1,0 +1,91 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Getting Started/Introduction" />
+
+# Presto Production WCAG Audit
+
+An accessibility audit of the **live** EventPipe / Presto booking journey, conducted
+against **WCAG 2.2 Level AA** at 1440px desktop and 390px mobile.
+
+Every page in this Storybook is a **verbatim capture of production**. Nothing has been
+rebuilt, tidied, or re-implemented. What you see under **Journeys** is the exact DOM the
+browser constructed on `presto.eventpipe.com` and `app.eventpipe.com`, styled with the
+exact production CSS. That matters: an audit of a reconstruction only proves things about
+the reconstruction. Findings here are arguable only on their merits, never on whether the
+markup was faithful.
+
+## The journey under audit
+
+The booking flow spans **two separate applications** with different technology stacks and,
+importantly, different accessibility characteristics. Fixes rarely transfer between them.
+
+| Stage | Host | Stack |
+| --- | --- | --- |
+| Search & filter results | `presto.eventpipe.com` | Vue 3 + Quasar SPA |
+| Hotel detail & room select | `presto.eventpipe.com` | Vue 3 + Quasar SPA |
+| Checkout (4-step wizard) | `app.eventpipe.com` | Server-rendered forms |
+| Confirmation | `app.eventpipe.com` | Server-rendered forms |
+| Manage booking | `app.eventpipe.com` | Server-rendered forms |
+
+The reference event is **2026 – Fall Continental Cup** (Team Travel Source), a live 3STEP
+Sports housing event.
+
+## How to use this Storybook
+
+Each page in the journey has two entries:
+
+- **The page itself** — a live snapshot. Open Storybook's **Accessibility** panel and axe
+  runs against the real production markup, in place. You can inspect elements, tab through
+  the DOM, and reproduce any finding yourself.
+- **— Findings** — every issue on that page: what element, why it fails, which WCAG
+  success criterion, and a ready-to-apply code fix for the relevant stack.
+
+Start at the **Scorecard** for totals and the worst offenders.
+
+## What "verbatim" means technically
+
+Each snapshot is mounted inside an **open shadow root**. That containment is what makes the
+audit trustworthy in both directions: 400kb of production CSS carries `body`, `*` and bare
+element rules that would otherwise repaint Storybook's own chrome, while Storybook's preview
+styles would leak into the page and alter the very contrast and sizing being measured.
+
+The root is *open* rather than closed specifically so axe-core can walk into it — the
+Accessibility panel reports on production markup, not on a wrapper.
+
+Scripts are stripped from every capture. These are static forensic snapshots; re-running the
+production bundle would re-hydrate the SPA, fire analytics, and mutate the DOM under audit.
+A consequence worth knowing: **interactive behaviour is not reproduced**. Dropdowns will not
+open, and the map is a static tile. Findings that depend on interaction were verified against
+the live site during capture, not by clicking around in here.
+
+## Scope and honesty about coverage
+
+Automated rules catch roughly a third of WCAG failures. They check whether markup is
+*malformed*, not whether it is *meaningful* — a page with no headings, no landmarks and no
+skip link passes axe cleanly while being close to unusable with a screen reader.
+
+This audit therefore combines three evidence sources, and every finding is labelled with
+which one produced it:
+
+1. **axe-core 4.12**, WCAG 2.2 A + AA tag set, run against each snapshot.
+2. **Structural analysis** of the captured DOM inventory — heading outline, landmark
+   coverage, label association, autocomplete tokens, measured target geometry.
+3. **Empirical keyboard traversal** — real `Tab` presses on the live site with
+   before/after pixel diffing of each focused control.
+
+That third method exists because focus visibility cannot be settled by reading CSS.
+`:focus-visible` does not match a programmatic `.focus()` call, and a component may indicate
+focus by animating a child element rather than itself. An early style-only pass on this
+codebase reported 169 unfocusable elements on one page; measuring it properly showed the real
+number was 2. Findings in this audit are measured, not inferred.
+
+## What is not yet covered
+
+Three pages are gated behind a completed booking or an authenticated session and are marked
+**pending** — the confirmation page, checkout steps 2–4, and authenticated booking
+management. Their slots exist in the correct position in the journey and will populate as
+soon as URLs are supplied. See **Methodology** for how to add them.
+
+No screen-reader transcript pass (NVDA / VoiceOver) has been run yet. Name-role-value has
+been assessed from the accessibility tree, which is a good proxy but not a substitute for
+listening to the flow end to end.

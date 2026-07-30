@@ -1,0 +1,771 @@
+{
+  "desktop": {
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "help": "Buttons must have discernible text",
+        "description": "Ensure buttons have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-btn--round"
+              ]
+            ],
+            "html": "<button data-v-ddcd707f=\"\" class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase arrow-button\" tabindex=\"0\" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 1,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".bg-green > .q-chip__content.q-anchor--skip.no-wrap"
+              ]
+            ],
+            "html": "<div class=\"q-chip__content col row no-wrap items-center q-anchor--skip\">Preferred Hotel</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #4caf50, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#ffffff",
+              "bgColor": "#4caf50",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".low-rate > .q-chip__content.q-anchor--skip.no-wrap"
+              ]
+            ],
+            "html": "<div class=\"q-chip__content col row no-wrap items-center q-anchor--skip\">Low Rate Guarantee</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(1) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">24 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(2) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">22 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(3) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">6 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(4) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">23 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".text-caption"
+              ]
+            ],
+            "html": "<div class=\"text-caption text-grey\">Total includes taxes &amp; fees</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.67 (foreground color: #9e9e9e, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#9e9e9e",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.67,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".footer-link"
+              ]
+            ],
+            "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#f9f9fa",
+              "contrastRatio": 3.78,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 8,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "help": "Images must have alternative text",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/image-alt?application=axeAPI",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "TT7.b",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".big-image"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/7528ce55-fc62-43f6-b5e3-03dc87cbe769.png\" class=\"big-image\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".grid-item[data-v-ddcd707f=\"\"]:nth-child(1) > .image-hover"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/593b3fe9-eccd-46a8-90f5-3f38252bd06e.png\" class=\"image-hover\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".grid-item[data-v-ddcd707f=\"\"]:nth-child(2) > .image-hover"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/ebcaa014-07b7-42e9-bbe2-4d7bc0509b07.png\" class=\"image-hover\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".grid-item[data-v-ddcd707f=\"\"]:nth-child(3) > .image-hover"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png\" class=\"image-hover\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".grid-item[data-v-ddcd707f=\"\"]:nth-child(4) > .image-hover"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/7ddf2c1c-2b68-48ff-bbe8-e60dd520ce5f.png\" class=\"image-hover\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 5,
+        "level": "A",
+        "sc": [
+          "1.1.1"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".see-images > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">See All Photos</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".stick > .q-btn--flat.q-btn--rectangle.q-btn--no-uppercase:nth-child(1) > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">Overview</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".stick > .q-btn--flat.q-btn--rectangle.q-btn--no-uppercase:nth-child(2) > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">About</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-btn--flat.q-btn--rectangle.q-btn--no-uppercase:nth-child(3) > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">Rooms</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-btn--flat.q-btn--rectangle.q-btn--no-uppercase:nth-child(4) > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">Policies</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".nights-title"
+              ]
+            ],
+            "html": "<div data-v-1ed65d41=\"\" class=\"row nights-title\">Nights</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "bold",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 6,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "violations": [
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "help": "Buttons must have discernible text",
+        "description": "Ensure buttons have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/button-name?application=axeAPI",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT6.a",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.9.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "div[data-v-8aaf5340=\"\"]:nth-child(2) > .q-btn--flat.q-btn--rectangle"
+              ]
+            ],
+            "html": "<button data-v-8aaf5340=\"\" class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--rectangle text-primary q-btn--actionable q-focusable q-hoverable\" tabindex=\"0\" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-btn--round"
+              ]
+            ],
+            "html": "<button data-v-ddcd707f=\"\" class=\"q-btn q-btn-item non-selectable no-outline q-btn--flat q-btn--round q-btn--actionable q-focusable q-hoverable q-btn--no-uppercase arrow-button\" tabindex=\"0\" type=\"button\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 2,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".bg-green > .q-chip__content.q-anchor--skip.no-wrap"
+              ]
+            ],
+            "html": "<div class=\"q-chip__content col row no-wrap items-center q-anchor--skip\">Preferred Hotel</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #ffffff, background color: #4caf50, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#ffffff",
+              "bgColor": "#4caf50",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".low-rate > .q-chip__content.q-anchor--skip.no-wrap"
+              ]
+            ],
+            "html": "<div class=\"q-chip__content col row no-wrap items-center q-anchor--skip\">Low Rate Guarantee</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(1) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">24 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(2) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">22 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(3) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">6 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".q-py-xs:nth-child(4) > .text-green"
+              ]
+            ],
+            "html": "<div class=\"text-green\">23 rooms left</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.77 (foreground color: #4caf50, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#4caf50",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.77,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".text-caption"
+              ]
+            ],
+            "html": "<div class=\"text-caption text-grey\">Total includes taxes &amp; fees</div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.67 (foreground color: #9e9e9e, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#9e9e9e",
+              "bgColor": "#ffffff",
+              "contrastRatio": 2.67,
+              "fontSize": "9.0pt (12px)",
+              "fontWeight": "normal",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".footer-link"
+              ]
+            ],
+            "html": "<a data-v-fd02e343=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #007bff, background color: #f9f9fa, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#f9f9fa",
+              "contrastRatio": 3.78,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 8,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "help": "Images must have alternative text",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/image-alt?application=axeAPI",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "TTv5",
+          "TT7.a",
+          "TT7.b",
+          "EN-301-549",
+          "EN-9.1.1.1",
+          "ACT",
+          "RGAAv4",
+          "RGAA-1.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".big-image"
+              ]
+            ],
+            "html": "<img data-v-ddcd707f=\"\" src=\"https://storage.googleapis.com/eventpipe/53f9c352-c0d9-4dc5-9669-1dc5432c439d.png\" class=\"big-image\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": null
+          }
+        ],
+        "totalNodes": 1,
+        "level": "A",
+        "sc": [
+          "1.1.1"
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".see-images > .q-btn__content.text-center.q-anchor--skip > .block"
+              ]
+            ],
+            "html": "<span class=\"block\">See All Photos</span>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because element contains an image node",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "imgNode",
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".nights-title"
+              ]
+            ],
+            "html": "<div data-v-1ed65d41=\"\" class=\"row nights-title\">Nights</div>",
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "12.0pt (16px)",
+              "fontWeight": "bold",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 2,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      }
+    ]
+  }
+}

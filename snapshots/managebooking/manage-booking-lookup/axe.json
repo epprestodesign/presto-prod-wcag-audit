@@ -1,0 +1,286 @@
+{
+  "desktop": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col[data-v-f8e95a15=\"\"]:nth-child(1) > .q-item__label.text-secondary.text-bold"
+              ]
+            ],
+            "html": "<div data-v-f8e95a15=\"\" class=\"q-item__label text-secondary text-bold\">Email Address <span data-v-f8e95a15=\"\" class=\"text-red\">*</span></div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col[data-v-f8e95a15=\"\"]:nth-child(2) > .q-item__label.text-secondary.text-bold"
+              ]
+            ],
+            "html": "<div data-v-f8e95a15=\"\" class=\"q-item__label text-secondary text-bold\">Reservation ID (Pipe ID) or Group ID <span data-v-f8e95a15=\"\" class=\"text-red\">*</span></div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "a"
+              ]
+            ],
+            "html": "<a data-v-ee7d2589=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" color=\"accent\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #007bff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.97,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 3,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "help": "Form elements must have labels",
+        "description": "Ensure every form element has a label",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/label?application=axeAPI",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#f_8c20691e-ad63-4f26-9e65-66ba13b94a56"
+              ]
+            ],
+            "html": "<input class=\"q-field__native q-placeholder\" tabindex=\"0\" modelmodifiers=\"[object Object]\" id=\"f_8c20691e-ad63-4f26-9e65-66ba13b94a56\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": {
+              "implicitLabel": ""
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#f_d4225e42-a94d-4c68-9d75-3c7e62c4efa2"
+              ]
+            ],
+            "html": "<input class=\"q-field__native q-placeholder\" tabindex=\"0\" modelmodifiers=\"[object Object]\" id=\"f_d4225e42-a94d-4c68-9d75-3c7e62c4efa2\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": {
+              "implicitLabel": ""
+            }
+          }
+        ],
+        "totalNodes": 2,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      }
+    ],
+    "incomplete": []
+  },
+  "mobile": {
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col[data-v-f8e95a15=\"\"]:nth-child(1) > .q-item__label.text-secondary.text-bold"
+              ]
+            ],
+            "html": "<div data-v-f8e95a15=\"\" class=\"q-item__label text-secondary text-bold\">Email Address <span data-v-f8e95a15=\"\" class=\"text-red\">*</span></div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                ".col[data-v-f8e95a15=\"\"]:nth-child(2) > .q-item__label.text-secondary.text-bold"
+              ]
+            ],
+            "html": "<div data-v-f8e95a15=\"\" class=\"q-item__label text-secondary text-bold\">Reservation ID (Pipe ID) or Group ID <span data-v-f8e95a15=\"\" class=\"text-red\">*</span></div>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.11 (foreground color: #8c92a0, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#8c92a0",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.11,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "a"
+              ]
+            ],
+            "html": "<a data-v-ee7d2589=\"\" href=\"https://eventpipe.com/legal/privacy\" target=\"_blank\" color=\"accent\" class=\"footer-link\">Privacy Policy</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.97 (foreground color: #007bff, background color: #ffffff, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1",
+            "data": {
+              "fgColor": "#007bff",
+              "bgColor": "#ffffff",
+              "contrastRatio": 3.97,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "bold",
+              "messageKey": null,
+              "expectedContrastRatio": "4.5:1"
+            }
+          }
+        ],
+        "totalNodes": 3,
+        "level": "AA",
+        "sc": [
+          "1.4.3"
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "help": "Form elements must have labels",
+        "description": "Ensure every form element has a label",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.12/label?application=axeAPI",
+        "tags": [
+          "cat.forms",
+          "wcag2a",
+          "wcag412",
+          "section508",
+          "section508.22.n",
+          "TTv5",
+          "TT5.c",
+          "EN-301-549",
+          "EN-9.4.1.2",
+          "ACT",
+          "RGAAv4",
+          "RGAA-11.1.1"
+        ],
+        "nodes": [
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#f_7540b873-1eca-4c21-abb3-59b57840220e"
+              ]
+            ],
+            "html": "<input class=\"q-field__native q-placeholder\" tabindex=\"0\" modelmodifiers=\"[object Object]\" id=\"f_7540b873-1eca-4c21-abb3-59b57840220e\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": {
+              "implicitLabel": ""
+            }
+          },
+          {
+            "target": [
+              [
+                "div[data-snapshot=\"1\"]",
+                "#f_84abfa7c-4cb3-418e-814a-208a6be2df58"
+              ]
+            ],
+            "html": "<input class=\"q-field__native q-placeholder\" tabindex=\"0\" modelmodifiers=\"[object Object]\" id=\"f_84abfa7c-4cb3-418e-814a-208a6be2df58\" type=\"text\" value=\"\">",
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\"",
+            "data": {
+              "implicitLabel": ""
+            }
+          }
+        ],
+        "totalNodes": 2,
+        "level": "A",
+        "sc": [
+          "4.1.2"
+        ]
+      }
+    ],
+    "incomplete": []
+  }
+}

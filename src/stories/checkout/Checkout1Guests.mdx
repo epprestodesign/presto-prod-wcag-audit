@@ -1,0 +1,883 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Journeys/Checkout/1. Guest Information — Findings" />
+
+# 1. Guest Information — Findings
+
+Step 1 of the reservation wizard. Guest names, type, org/team, SMS consent, special requests. Includes the 15-minute countdown timer.
+
+**Captured from:** `https://presto.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/shopKey/6a6b79b85171a074d87851cd/hotel/48415cdb-dfea-4cb1-90e0-f678196a1702`
+
+---
+
+## Summary
+
+| Impact | Count |
+| --- | --- |
+| Critical | 3 |
+| Serious | 6 |
+| Moderate | 3 |
+| Minor | 0 |
+
+12 distinct issues on this page.
+
+---
+### 1. 9 form controls have no programmatic label
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 4.1.2, 3.3.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `unlabelled-controls` |
+| **Detected by** | manual |
+| **Occurrences** | 9 |
+| **Viewports** | desktop, mobile |
+
+
+These controls rely on placeholder text or adjacent visual text. A placeholder is not an accessible name: it is not announced by every screen reader, and it disappears the moment the user starts typing, removing the only cue to what the field was for.
+
+**Evidence**
+
+- `&lt;input type="text"&gt; placeholder="First Name"`
+- `&lt;input type="text"&gt; placeholder="Last Name"`
+- `&lt;input type="text"&gt; placeholder="(000) 000-0000"`
+- `&lt;select&gt; placeholder=""`
+- `&lt;input type="text"&gt; placeholder="Group, club, team, gym name (or N/A if not applicable)"`
+- `&lt;input type="text"&gt; placeholder="i.e. All-Stars 12U Team"`
+- `&lt;input type="text"&gt; placeholder="Earn points - enter your hotel brand rewards account number (if applicable)"`
+- `&lt;textarea&gt; placeholder="Write your message here"`
+- `&lt;input type="file"&gt; placeholder=""`
+
+<details>
+<summary>Affected elements (9)</summary>
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].FirstName" placeholder="First Name"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].LastName" placeholder="Last Name"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].PhoneNumber" placeholder="(000) 000-0000"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(4) &gt; select -->
+&lt;select name="Rooms[0].Guests[0].GuestType" placeholder=""&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(4) &gt; div:nth-of-type(1) &gt; div &gt; input -->
+&lt;input name="Rooms[0].OrganizationName" placeholder="Group, club, team, gym name (or N/A if not applicable)"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(4) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; input -->
+&lt;input name="Rooms[0].TeamName" placeholder="i.e. All-Stars 12U Team"&gt;
+```
+
+```html
+<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(6) &gt; div &gt; input -->
+&lt;input name="Rooms[0].HotelRewardsNumber" placeholder="Earn points - enter your hotel brand rewards account number (if applicable)"&gt;
+```
+
+```html
+<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; div &gt; textarea -->
+&lt;textarea name="" placeholder="Write your message here"&gt;
+```
+
+```html
+<!-- div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(3) &gt; span:nth-of-type(1) &gt; input -->
+&lt;input name="file" placeholder=""&gt;
+```
+
+</details>
+
+#### Fix — Give every form control a real, programmatic label
+
+These controls are identified only by placeholder text or by nearby visual text. A placeholder is not an accessible name: it is not reliably announced, it fails contrast at its default grey, and it disappears the moment the user types — removing the only cue to what the field was for. Users who navigate a form field-by-field with a screen reader hear "edit, blank".
+
+**Before** (production)
+
+```html
+<!-- checkout step 1: label is a sibling div, not associated -->
+<div class="field-label">Team Name <span class="req">*</span></div>
+<input type="text" name="Rooms[0].TeamName" placeholder="i.e. All-Stars 12U Team">
+```
+
+**After**
+
+```html
+<!-- Associate explicitly. The for/id pair is what makes the text a *name*. -->
+<label for="team-name">
+  Team Name
+  <!-- asterisk hidden from AT; the required attribute already conveys it -->
+  <span class="req" aria-hidden="true">*</span>
+</label>
+<input type="text"
+       id="team-name"
+       name="Rooms[0].TeamName"
+       required
+       aria-required="true"
+       placeholder="i.e. All-Stars 12U Team">
+```
+
+**Vue / Quasar form**
+
+```html
+<!-- Vue/Quasar side: q-input renders the association for you.
+     Never replace :label with a bare placeholder. -->
+<q-input
+  v-model="teamName"
+  label="Team Name"
+  :rules="[val => !!val || 'Team name is required']"
+  hint="i.e. All-Stars 12U Team"
+/>
+
+<!-- If a design truly forbids a visible label, name it explicitly — but a
+     visible label is preferred: it also serves users with cognitive load. -->
+<q-input v-model="query" aria-label="Search by property name" />
+```
+
+**Notes**
+
+- Production ids here are order-scoped (`Rooms[0].Guests[0].FirstName`). Reuse that exact string as the id so for/id stays unique when a second guest row is added.
+- Do not point `for` at a wrapper div — it must reference the control itself.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 2. Checkout imposes a ~15-minute time limit with no way to turn it off, adjust it, or extend it
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 2.2.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `timing-adjustable` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop |
+
+
+WCAG 2.2.1 (Level A) allows a time limit only if the user can turn it off, adjust it to at least ten times the default, or extend it with a simple action after a warning. This checkout offers none of the three. The limit spans a four-step form that asks for guest names, an organisation, a team, payment details and policy acknowledgements — a user relying on a screen reader, a switch device, voice control, or simply reading carefully can very plausibly exceed it and lose the reservation. This is the single highest-severity finding in the audit: it can make the booking flow impossible to complete rather than merely difficult.
+
+**Evidence**
+
+- `Countdown found in production markup, starting at 14:52`
+- `No extend, pause, or disable control present in the DOM`
+
+<details>
+<summary>Affected elements (1)</summary>
+
+```html
+<!-- .time-remaining -->
+Time remaining: 14:54
+```
+
+</details>
+
+#### Fix — Give the user control over the checkout time limit
+
+A time limit is only permitted under WCAG 2.2.1 if the user can turn it off, adjust it to at least ten times the default, or extend it by a simple action after being warned. Offering none of the three is a Level A failure. The practical harm is severe here: the timer spans a four-step form collecting names, org, team, payment and policy consent. A screen-reader user, a switch user, or anyone reading carefully can exceed 15 minutes and silently lose the reservation.
+
+**Before** (production)
+
+```html
+<!-- Countdown runs down and the order is dropped. No control offered. -->
+<div class="reservation-timer">
+  <span>Reserve before time runs out!</span>
+  <span class="time-remaining">Time remaining: 14:54</span>
+</div>
+```
+
+**After**
+
+```html
+<!-- Minimum compliant change: warn before expiry and let the user extend.
+     The "Extend" button satisfies 2.2.1's "extend with a simple action". -->
+<div class="reservation-timer">
+  <span id="timer-label">Reserve before time runs out!</span>
+
+  <!-- role="timer" + aria-live="off" keeps SRs from announcing every tick -->
+  <span class="time-remaining" role="timer" aria-live="off"
+        aria-labelledby="timer-label">Time remaining: 14:54</span>
+</div>
+
+<!-- Warning surfaces at T-2:00. assertive: the user must hear it in time. -->
+<div class="timer-warning" role="alertdialog" aria-live="assertive"
+     aria-labelledby="warn-title" hidden>
+  <h2 id="warn-title">Your reservation hold expires in 2 minutes</h2>
+  <button type="button" id="extend-hold">Give me 20 more minutes</button>
+  <button type="button" id="dismiss-warning">Continue without extending</button>
+</div>
+```
+
+
+**Notes**
+
+- Server must honour the extension — a client-only timer change just moves the failure.
+- Announce with aria-live="assertive" only for the warning, never for each tick: a per-second live region makes the form unusable with a screen reader.
+- Best fix is to remove the visible countdown entirely for logged-in users and hold inventory server-side, keeping the timer as a silent backstop.
+- If the limit is essential for inventory integrity, WCAG has a "Real-time Exception" — but it does not apply here, because a hotel hold is not a real-time event like an auction.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---
+
+### 3. Select element must have an accessible name
+
+<span class="f-badge critical">critical</span> <span class="f-badge sc">WCAG 4.1.2 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `select-name` |
+| **Detected by** | axe-core |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+| **Reference** | [select-name](https://dequeuniversity.com/rules/axe/4.12/select-name?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (1)</summary>
+
+```html
+<!-- div[data-snapshot="1"],#Rooms\[0\]\.Guests\[0\]\.GuestType -->
+&lt;select name="Rooms[0].Guests[0].GuestType" id="Rooms[0].Guests[0].GuestType" class="customized-select text-muted"&gt;
+```
+
+</details>
+
+#### Fix — Name the select, and stop using a paragraph as its label
+
+The SMS-consent select has no programmatic name, and its visible label is a ~300-character legal paragraph. A screen reader announces the entire paragraph before the user reaches the options, every time focus enters the control. The consent text is necessary — but it is a description, not a name.
+
+**Before** (production)
+
+```html
+<!-- The whole consent paragraph is the visible label, and the select
+     itself has no accessible name at all. -->
+<div class="consent-text">
+  By selecting yes, you agree to receive text messages at the number provided.
+  Message frequency may vary. Standard message and data rates may apply.
+  Text HELP for help. Text STOP to cancel. *
+</div>
+<select name="Rooms[0].CustomFieldValues[0].FieldValue">
+  <option value="">Select By selecting yes, you agree to receive text messages…</option>
+  <option>Yes</option>
+  <option>No</option>
+</select>
+```
+
+**After**
+
+```html
+<!-- Short name via <label>, long legalese via aria-describedby.
+     SRs announce the name first, then the description — so the user knows
+     what the control *is* before hearing the terms. -->
+<label for="sms-consent">Receive text message updates</label>
+
+<p id="sms-consent-terms" class="consent-text">
+  By selecting yes, you agree to receive text messages at the number provided.
+  Message frequency may vary. Standard message and data rates may apply.
+  Text HELP for help. Text STOP to cancel.
+</p>
+
+<select id="sms-consent"
+        name="Rooms[0].CustomFieldValues[0].FieldValue"
+        required
+        aria-required="true"
+        aria-describedby="sms-consent-terms">
+  <option value="">Select an option</option>
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select>
+```
+
+
+**Notes**
+
+- Also fixes the placeholder option, which currently repeats the entire paragraph as option text.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---
+
+### 4. 4 focusable elements produce no visible change when focused
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.4.7 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `focus-not-visible` |
+| **Detected by** | manual |
+| **Occurrences** | 4 |
+| **Viewports** | desktop |
+
+
+Measured by tabbing to each element and diffing the rendered pixels against the same region unfocused. These produced no perceptible change, so a sighted keyboard user cannot tell where they are.
+
+**Evidence**
+
+- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+- `&lt;div&gt; "Close chat" 20x20 — outline: auto 1px rgb(0, 95, 204)`
+
+<details>
+<summary>Affected elements (4)</summary>
+
+```html
+<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
+&lt;div&gt; Close chat
+```
+
+```html
+<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
+&lt;div&gt; Close chat
+```
+
+```html
+<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
+&lt;div&gt; Close chat
+```
+
+```html
+<!-- div:nth-of-type(3)&gt;div:nth-of-type(2)&gt;div:nth-of-type(3) -->
+&lt;div&gt; Close chat
+```
+
+</details>
+
+#### Fix — Make these specific controls show focus
+
+Measured by tabbing to each control and diffing rendered pixels: these produced no perceptible change when focused. Most are third-party chat-widget controls and 1x1 proxy inputs behind styled Quasar components.
+
+**Before** (production)
+
+```html
+<!-- 1x1 proxy input: a real tab stop the user cannot see -->
+<input class="q-field__native" style="width:1px;height:1px">
+```
+
+**After**
+
+```html
+/* Style the styled wrapper when the proxy inside it has focus, so the
+   thing the user actually sees reacts. */
+.q-field:focus-within .q-field__control {
+  outline: 2px solid #14203c;
+  outline-offset: 2px;
+}
+```
+
+
+**Notes**
+
+- The chat widget is third-party — either configure its theme for a visible ring or raise it with the vendor.
+- See "focus-appearance" for the global rule that causes most of this.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 5. Elements must meet minimum color contrast ratio thresholds
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 1.4.3 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `color-contrast` |
+| **Detected by** | axe-core |
+| **Occurrences** | 4 |
+| **Viewports** | desktop, mobile |
+| **Reference** | [color-contrast](https://dequeuniversity.com/rules/axe/4.12/color-contrast?application=axeAPI) |
+
+
+
+<details>
+<summary>Affected elements (4)</summary>
+
+```html
+<!-- div[data-snapshot="1"],.btn-outline.btn-outline-primary[target="_blank"] -->
+&lt;a class="btn btn-outline btn-outline-primary font-14" href="https://app.eventpipe.com/search/" target="_blank"&gt;Manage Booking&lt;/a&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],.text-yellow -->
+&lt;p class="font-14 text-yellow"&gt;&lt;i class="fa fa-star"&gt;&lt;/i&gt; 3.5 Stars&lt;/p&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],.mb-md-0.col-md-6.col-12 &gt; .btn-outline-secondary.btn.w-100 -->
+&lt;a href="https://app.eventpipe.com/event/9f16e139-935b-48f6-80cf-da2628b33b9c/order/6db10b9f-5135-492e-908d-002e4766abf7/restart/" class="btn btn-outline-secondary w-100"&gt;Start Over&lt;/a&gt;
+```
+
+```html
+<!-- div[data-snapshot="1"],.col-md-6.col-12:nth-child(2) &gt; .btn-outline-secondary.btn.w-100 -->
+&lt;a href="https://app.eventpip..." class="btn btn-outline-seco..."&gt;
+```
+
+</details>
+
+#### Fix — Raise text contrast to 4.5:1 (3:1 for large text)
+
+The largest single count in the audit. Failing text is mostly grey-on-white secondary copy, placeholder text, and white text on light brand fills. At typical mobile brightness this is the difference between readable and invisible for users with low vision — and for everyone outdoors.
+
+**Before** (production)
+
+```html
+/* Placeholder and secondary text below 4.5:1 on white */
+.text-grey-6      { color: #9e9e9e; }   /* 2.85:1 on #fff — fails */
+input::placeholder{ color: #a8a8a8; }   /* 2.54:1 on #fff — fails */
+```
+
+**After**
+
+```html
+/* Darkened to clear 4.5:1 on white. Values chosen to stay within the
+   existing grey ramp so the visual design is preserved. */
+.text-grey-6      { color: #6b6b6b; }   /* 4.62:1 — passes AA  */
+input::placeholder{ color: #666666; }   /* 5.05:1 — passes AA  */
+
+/* Large text (>=24px, or >=18.66px bold) may use 3:1 */
+.hero-subtitle    { color: #767676; }   /* 4.54:1 — passes at any size */
+```
+
+
+**Notes**
+
+- Check the fix against the real background, not white — several failures sit on the #f9f9fa page fill, which needs slightly darker text than pure white does.
+- The white-on-photo hero title cannot be fixed with a colour change alone: add a scrim (e.g. `background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45))`) so contrast is guaranteed regardless of which event image is uploaded.
+- Disabled controls are exempt from 1.4.3, so filter those out before triaging the raw count.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 6. 3 interactive targets are under the 24x24 CSS-pixel minimum
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.5.8 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `small-targets` |
+| **Detected by** | manual |
+| **Occurrences** | 3 |
+| **Viewports** | desktop, mobile |
+
+
+WCAG 2.2 requires pointer targets be at least 24x24 CSS pixels unless spaced apart or offered another way. Undersized targets are hardest for users with tremor or reduced dexterity, and on touch devices for everyone.
+
+**Evidence**
+
+- `a "Team Travel Source (TTS) Privacy Policy" — 203x15px`
+- `a "Privacy Policy" — 83x21px`
+- `div "Close chat" — 20x20px`
+
+<details>
+<summary>Affected elements (3)</summary>
+
+```html
+<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(7) &gt; span &gt; a -->
+&lt;a&gt; Team Travel Source (TTS) Privacy Policy
+```
+
+```html
+<!-- div:nth-of-type(2) &gt; div &gt; div &gt; a -->
+&lt;a&gt; Privacy Policy
+```
+
+```html
+<!-- div:nth-of-type(3) &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) -->
+&lt;div&gt; Close chat
+```
+
+</details>
+
+#### Fix — Enlarge undersized targets
+
+Measured geometry shows these focusable elements render below 24x24 CSS pixels.
+
+**Before** (production)
+
+```html
+.star { width: 14px; height: 14px; }
+```
+
+**After**
+
+```html
+.star { width: 14px; height: 14px; padding: 5px; box-sizing: content-box; }
+```
+
+
+**Notes**
+
+- Identical remedy to target-size; this entry is sourced from measured geometry rather than axe.
+
+**Effort:** M &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 7. Missing landmark regions: main, banner
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 1.3.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `missing-landmarks` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+Landmarks are how assistive-technology users move between regions of a page. Without a &lt;main&gt; landmark there is no way to jump past the header and filters straight to the results.
+
+**Evidence**
+
+- `Landmarks present: nav, form`
+
+
+#### Fix — Wrap the page in landmark regions
+
+Only a &lt;footer&gt; exists site-wide. Landmarks let assistive-tech users jump between regions — without &lt;main&gt;, there is no way to skip the header, hero and filter rail and land on the results.
+
+**Before** (production)
+
+```html
+<div id="app">
+  <div class="header">…</div>
+  <div class="filters">…</div>
+  <div class="results">…</div>
+  <footer>…</footer>
+</div>
+```
+
+**After**
+
+```html
+<div id="app">
+  <header role="banner">
+    <nav aria-label="Primary">…</nav>
+  </header>
+
+  <!-- The single most valuable addition: a jump target for the results -->
+  <main id="main-content">
+    <!-- Two search regions on one page must be told apart by name -->
+    <search aria-label="Hotel filters">…</search>
+    <section aria-label="Search results">…</section>
+  </main>
+
+  <footer role="contentinfo">…</footer>
+</div>
+```
+
+
+**Notes**
+
+- Exactly one &lt;main&gt; per page.
+- Name repeated landmarks (`aria-label`) — two unnamed &lt;nav&gt;s are indistinguishable in a landmark list.
+- &lt;search&gt; is the HTML element for a search region; `role="search"` is the fallback for older AT.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 8. No skip link, and no landmarks to bypass with
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 2.4.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `no-skip-link` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+A keyboard user must tab through 18 stops in source order to reach anything late on the page. With no skip link and no &lt;main&gt; landmark there is no bypass mechanism at all — this is a Level A failure, not a convenience issue.
+
+**Evidence**
+
+- `18 tab stops before any bypass is offered`
+- `First stops: Manage Booking -&gt; 1 -&gt; input`
+
+
+#### Fix — Add a skip link
+
+A keyboard user faces 215 tab stops in source order on the desktop search page, with no way to bypass the header and filter rail. WCAG 2.4.1 is Level A and is satisfied by either a skip link or landmarks; this journey currently has neither.
+
+**Before** (production)
+
+```html
+<!-- nothing precedes the header in tab order -->
+<header>…</header>
+```
+
+**After**
+
+```html
+<!-- First focusable element on the page. Visually hidden until focused,
+     so it costs the visual design nothing. -->
+<a class="skip-link" href="#main-content">Skip to search results</a>
+
+<header>…</header>
+<main id="main-content" tabindex="-1">…</main>
+
+<style>
+.skip-link {
+  position: absolute;
+  top: -100px;         /* off-screen, but still focusable */
+  left: 8px;
+  z-index: 10000;
+  padding: 12px 20px;
+  background: #14203c;
+  color: #fff;
+  border-radius: 0 0 6px 6px;
+  text-decoration: none;
+  transition: top .15s ease-in;
+}
+.skip-link:focus { top: 0; }   /* slides into view on keyboard focus */
+</style>
+```
+
+
+**Notes**
+
+- `tabindex="-1"` on the target makes the jump actually move focus in Safari and Chrome; without it the link scrolls but focus stays behind.
+- Never hide it with `display:none` or `visibility:hidden` — that removes it from the tab order and defeats the purpose.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 9. Document has no lang attribute
+
+<span class="f-badge serious">serious</span> <span class="f-badge sc">WCAG 3.1.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `no-lang` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+Without a language, a screen reader may announce the page using the wrong pronunciation rules.
+
+**Evidence**
+
+- `&lt;html&gt; has no lang attribute`
+
+
+#### Fix — Declare the document language
+
+The checkout document has no lang attribute. Screen readers fall back to the user's default voice, so English content may be read with the pronunciation rules of another language — often unintelligible.
+
+**Before** (production)
+
+```html
+<html>
+```
+
+**After**
+
+```html
+<html lang="en">
+```
+
+
+**Notes**
+
+- The Vue SPA already sets lang="en"; only the server-rendered checkout is missing it.
+- Mark any inline language change too: `&lt;span lang="fr"&gt;…&lt;/span&gt;`.
+
+**Effort:** XS &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---
+
+### 10. 4 inputs collecting personal data lack an autocomplete token
+
+<span class="f-badge moderate">moderate</span> <span class="f-badge sc">WCAG 1.3.5 (Level AA)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `missing-autocomplete` |
+| **Detected by** | manual |
+| **Occurrences** | 4 |
+| **Viewports** | desktop, mobile |
+
+
+WCAG 1.3.5 requires that inputs collecting information about the user expose their purpose programmatically. Without it, browser autofill and assistive tech that substitutes familiar icons or vocabulary cannot identify the field — a direct barrier for users with cognitive disabilities.
+
+**Evidence**
+
+- `Rooms[0].Guests[0].FirstName -&gt; needs autocomplete="given-name"`
+- `Rooms[0].Guests[0].LastName -&gt; needs autocomplete="family-name"`
+- `Rooms[0].Guests[0].PhoneNumber -&gt; needs autocomplete="tel"`
+- `Rooms[0].HotelRewardsNumber -&gt; needs autocomplete="tel"`
+
+<details>
+<summary>Affected elements (4)</summary>
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].FirstName"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].LastName"&gt;
+```
+
+```html
+<!-- div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(2) &gt; div:nth-of-type(1) &gt; div:nth-of-type(3) &gt; input -->
+&lt;input name="Rooms[0].Guests[0].PhoneNumber"&gt;
+```
+
+```html
+<!-- div:nth-of-type(1) &gt; div &gt; div &gt; div:nth-of-type(2) &gt; div:nth-of-type(3) &gt; div:nth-of-type(1) &gt; div:nth-of-type(1) &gt; div:nth-of-type(2) &gt; form &gt; div:nth-of-type(6) &gt; div &gt; input -->
+&lt;input name="Rooms[0].HotelRewardsNumber"&gt;
+```
+
+</details>
+
+#### Fix — Declare input purpose with autocomplete tokens
+
+WCAG 1.3.5 requires inputs collecting information about the user to expose their purpose programmatically. Without it, browser autofill cannot help and assistive tech that substitutes familiar icons or simplified vocabulary cannot identify the field — a direct barrier for users with cognitive disabilities, and needless friction for everyone else.
+
+**Before** (production)
+
+```html
+<input type="text" name="Rooms[0].Guests[0].FirstName">
+<input type="text" name="Rooms[0].Guests[0].LastName">
+<input type="text" name="Rooms[0].Guests[0].PhoneNumber">
+```
+
+**After**
+
+```html
+<input type="text"  name="Rooms[0].Guests[0].FirstName"
+       autocomplete="given-name">
+<input type="text"  name="Rooms[0].Guests[0].LastName"
+       autocomplete="family-name">
+<!-- type="tel" also brings up the numeric keypad on mobile -->
+<input type="tel"   name="Rooms[0].Guests[0].PhoneNumber"
+       autocomplete="tel">
+
+<!-- Payment step (same rule applies) -->
+<input autocomplete="cc-name">    <input autocomplete="cc-number">
+<input autocomplete="cc-exp">     <input autocomplete="cc-csc">
+<input autocomplete="postal-code">
+```
+
+
+**Notes**
+
+- Only the primary guest is "the user" in 1.3.5 terms — additional-guest rows are about someone else, so `autocomplete` there should be off or section-scoped (`section-guest2 given-name`) to avoid autofilling the wrong person.
+
+**Effort:** S &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---
+
+### 11. Page has no level-1 heading
+
+<span class="f-badge moderate">moderate</span> <span class="f-badge sc">WCAG 1.3.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `no-h1` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+There is no h1 to name the page, so its top-level topic is not exposed programmatically.
+
+**Evidence**
+
+- `h2: 2026 - Fall Continental Cup`
+- `h2: 2026 - Fall Continental Cup`
+- `h6: Two Queen Beds - Guest Room`
+- `h5: Warning`
+- `h5: Spark by Hilton Exton`
+- `h6: Reservation Summary`
+
+
+#### Fix — Add a level-1 heading
+
+Nothing names the page at the top of its outline, so AT users get no programmatic statement of what the page is.
+
+**Before** (production)
+
+```html
+<div class="page-title">1. Guest Information</div>
+```
+
+**After**
+
+```html
+<h1>Guest information for your reservation at Spark by Hilton Exton</h1>
+```
+
+
+**Notes**
+
+- Use .sr-only if the design has no room for a visible h1.
+
+**Effort:** XS &nbsp;•&nbsp; **Owner:** both
+
+---
+
+### 12. Heading levels skip a rank
+
+<span class="f-badge moderate">moderate</span> <span class="f-badge sc">WCAG 1.3.1 (Level A)</span>
+
+| | |
+| --- | --- |
+| **Rule** | `heading-skip` |
+| **Detected by** | manual |
+| **Occurrences** | 1 |
+| **Viewports** | desktop, mobile |
+
+
+Skipped ranks imply a nesting relationship that does not exist, misrepresenting the page outline.
+
+**Evidence**
+
+- `h2 -&gt; h6 at "Two Queen Beds - Guest Room"`
+
+
+#### Fix — Do not skip heading ranks
+
+A jump from h2 to h4 implies a nesting level that does not exist, misrepresenting the outline.
+
+**Before** (production)
+
+```html
+<h2>1. Guest Information</h2>
+  <h4>Two Queen Beds - Guest Room</h4>
+```
+
+**After**
+
+```html
+<h2>1. Guest Information</h2>
+  <h3 class="text-sm">Two Queen Beds - Guest Room</h3>
+```
+
+
+**Notes**
+
+- Pick the level from the structure, then style it to whatever size the design wants.
+
+**Effort:** XS &nbsp;•&nbsp; **Owner:** app.eventpipe.com (checkout)
+
+---

@@ -1,0 +1,22 @@
+{
+  "id": "manage-booking-detail",
+  "journey": "managebooking",
+  "title": "Manage Booking - Reservation",
+  "order": 20,
+  "auth": "session",
+  "description": "Authenticated reservation management: modify, cancel, resend confirmation.",
+  "url": null,
+  "note": "PASTE URL HERE - requires a confirmation number + email login.",
+  "settleMs": 3000,
+  "capturedAt": "2026-07-30T16:38:24.114Z",
+  "viewports": {
+    "desktop": {
+      "status": "pending",
+      "reason": "PASTE URL HERE - requires a confirmation number + email login."
+    },
+    "mobile": {
+      "status": "pending",
+      "reason": "PASTE URL HERE - requires a confirmation number + email login."
+    }
+  }
+}

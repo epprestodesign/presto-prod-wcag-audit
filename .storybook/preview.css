@@ -1,0 +1,41 @@
+/* Storybook chrome only. Nothing here reaches inside a snapshot's shadow root,
+   which is the point — the audited page must not inherit our styling. */
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.sb-show-main {
+  padding: 0;
+  background: #f4f4f7;
+}
+
+/* Finding callouts used inside the MDX docs pages. */
+.f-card {
+  border: 1px solid #e3e3ea;
+  border-left-width: 4px;
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  background: #fff;
+}
+.f-card.critical { border-left-color: #b3001b; }
+.f-card.serious  { border-left-color: #d4550c; }
+.f-card.moderate { border-left-color: #b38600; }
+.f-card.minor    { border-left-color: #4a6fa5; }
+
+.f-badge {
+  display: inline-block;
+  font: 600 11px/1.5 ui-monospace, monospace;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 3px;
+  margin-right: .4rem;
+  color: #fff;
+}
+.f-badge.critical { background: #b3001b; }
+.f-badge.serious  { background: #d4550c; }
+.f-badge.moderate { background: #8a6800; }
+.f-badge.minor    { background: #4a6fa5; }
+.f-badge.sc       { background: #2f2f3d; }

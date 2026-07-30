@@ -1,0 +1,8 @@
+node_modules/
+storybook-static/
+.DS_Store
+*.log
+
+# Playwright storage state for cookie-gated captures. Contains live session
+# cookies for a real account — never commit.
+capture/auth.json

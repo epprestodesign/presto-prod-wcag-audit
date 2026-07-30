@@ -1,0 +1,24 @@
+{
+  "name": "presto-prod-wcag-audit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "WCAG 2.2 AA audit of the production EventPipe/Presto booking journey. Captures real production HTML+CSS and documents every violation with a ready-to-ship fix.",
+  "type": "module",
+  "scripts": {
+    "capture": "node capture/scrape.mjs",
+    "audit": "node capture/audit.mjs",
+    "report": "node capture/report.mjs",
+    "pipeline": "pnpm capture && pnpm audit && pnpm report",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build -o storybook-static"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.4.6",
+    "@storybook/addon-docs": "^10.4.6",
+    "@storybook/html-vite": "^10.4.6",
+    "axe-core": "^4.10.2",
+    "playwright": "^1.62.0",
+    "storybook": "^10.4.6",
+    "vite": "^6.0.0"
+  }
+}
