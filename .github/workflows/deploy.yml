@@ -1,0 +1,62 @@
+name: Deploy Storybook to GitHub Pages
+
+# Publishes the audit so stakeholders can read it without running anything
+# locally. Mirrors the presto-2026 deploy, minus the prototype nesting and the
+# Maps/imagery build secrets — this repo's pages are static production captures
+# with every asset already inlined or absolutised at capture time, so the build
+# needs no environment configuration.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; cancel in-progress runs on new pushes.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+# Run JS-based actions on Node 24 (silences the Node 20 deprecation notice).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build Storybook
+        run: pnpm build-storybook
+        env:
+          STORYBOOK_DISABLE_TELEMETRY: "1"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
